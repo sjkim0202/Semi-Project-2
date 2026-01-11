@@ -1,0 +1,356 @@
+@charset "UTF-8";
+/* ========== 
+프라이버시
+ ========== */
+body.privacy .policy-container {
+	width: 90%;
+	max-width: 900px;
+	margin: 30px auto;
+	padding: 20px;
+	line-height: 1.6;
+	font-family: 'Malgun Gothic', 'Dotum', sans-serif;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	background-color: #fff;
+}
+
+/* ========== 제목 섹션 ========== */
+body.privacy h1 {
+	text-align: center;
+	border-bottom: 3px solid #004d99;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	color: #004d99;
+}
+
+body.privacy h2 {
+	color: #004d99;
+	margin-top: 40px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #004d99;
+}
+
+/* ========== 개별 조항 제목 (h3) ========== */
+body.privacy h3 {
+	background-color: transparent;
+	color: #333;
+	margin-top: 25px;
+	font-weight: bold;
+	font-size: 1.1em;
+	padding: 0;
+	display: block;
+	border-bottom: none;
+	margin-left: 0;
+}
+
+/* 파란색 사각형 아이콘 */
+body.privacy h3::before {
+	content: "■";
+	color: #004d99;
+	margin-right: 8px;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+/* ========== 본문 및 리스트 구조 ========== */
+body.privacy .policy-section {
+	margin-bottom: 30px;
+}
+
+body.privacy .policy-section p {
+	margin-left: 20px;
+}
+
+body.privacy .policy-section ol, body.privacy .policy-section ul {
+	margin-left: 40px;
+	padding-left: 0;
+	list-style-type: decimal;
+}
+
+body.privacy .policy-section ul li {
+	list-style-type: disc;
+}
+
+/* 하위 목록 스타일 조정 */
+body.privacy .policy-section ol ol {
+	list-style-type: lower-alpha;
+}
+
+body.privacy .policy-section ol ol ol {
+	list-style-type: decimal;
+}
+
+/* ========== 반응형 (모바일 뷰 고려) ========== */
+@media ( max-width : 768px) {
+	body.privacy .policy-container {
+		width: 95%;
+		padding: 16px;
+	}
+	body.privacy h1 {
+		font-size: 1.6em;
+	}
+	body.privacy h2 {
+		font-size: 1.2em;
+	}
+	body.privacy h3 {
+		font-size: 1em;
+	}
+	body.privacy .policy-section {
+		margin-bottom: 22px;
+	}
+	body.privacy .policy-section p, body.privacy .policy-section ol, body.privacy .policy-section ul
+		{
+		margin-left: 16px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.privacy .policy-container {
+		margin: 20px auto;
+		padding: 12px;
+	}
+	body.privacy h1 {
+		font-size: 1.4em;
+	}
+	body.privacy h2 {
+		font-size: 1.1em;
+	}
+	body.privacy h3 {
+		font-size: 0.95em;
+	}
+}
+
+/* ==========
+텀스오브유즈
+ ========== */
+body.terms .terms-container {
+	width: 90%;
+	max-width: 900px;
+	margin: 30px auto;
+	padding: 20px;
+	line-height: 1.6;
+	font-family: 'Malgun Gothic', 'Dotum', sans-serif;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	background-color: #fff;
+}
+
+/* ========== 헤더 스타일 ========== */
+body.terms h1 {
+	text-align: center;
+	border-bottom: 3px solid #333;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	color: #333;
+}
+
+/* ========== 장/항 제목 ========== */
+body.terms h2 {
+	color: #0056b3;
+	margin-top: 40px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #0056b3;
+}
+
+/* 조항 제목 (소제목) */
+body.terms h3 {
+	color: #333;
+	margin-top: 25px;
+	font-weight: bold;
+	font-size: 1.05em;
+}
+
+/* 조항 번호 앞 아이콘 */
+body.terms h3::before {
+	content: "■";
+	color: #0056b3;
+	margin-right: 8px;
+}
+
+/* 섹션 영역 */
+body.terms .term-section {
+	margin-bottom: 30px;
+}
+
+/* 본문 단락 */
+body.terms .term-section p {
+	margin-left: 20px;
+}
+
+/* 리스트 구조 */
+body.terms .term-section ol, body.terms .term-section ul {
+	margin-left: 40px;
+	padding-left: 0;
+}
+
+body.terms .term-section li {
+	margin-bottom: 10px;
+	color: #333;
+}
+
+/* 서브 리스트 들여쓰기 관리 */
+body.terms .term-section ol ol {
+	list-style-type: lower-alpha;
+}
+
+body.terms .term-section ol ol ol {
+	list-style-type: decimal;
+}
+
+/* ========== 반응형 ========== */
+@media ( max-width : 768px) {
+	body.terms .terms-container {
+		width: 95%;
+		padding: 16px;
+	}
+	body.terms h1 {
+		font-size: 1.6em;
+	}
+	body.terms h2 {
+		font-size: 1.2em;
+	}
+	body.terms h3 {
+		font-size: 1em;
+	}
+	body.terms .term-section {
+		margin-bottom: 24px;
+	}
+	body.terms .term-section p, body.terms .term-section ol, body.terms .term-section ul
+		{
+		margin-left: 16px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.terms .terms-container {
+		margin: 20px auto;
+		padding: 12px;
+	}
+	body.terms h1 {
+		font-size: 1.4em;
+	}
+	body.terms h2 {
+		font-size: 1.1em;
+	}
+	body.terms h3 {
+		font-size: 0.95em;
+	}
+}
+
+/* ==========
+유쓰폴리시
+========== */
+body.youth-policy .policy-container {
+	width: 90%;
+	max-width: 800px;
+	margin: 30px auto;
+	padding: 20px;
+	line-height: 1.6;
+	font-family: 'Malgun Gothic', 'Dotum', sans-serif;
+	background-color: #fff;
+}
+
+/* ========== 헤더 ========== */
+body.youth-policy h1 {
+	text-align: center;
+	border-bottom: 3px solid #004d99;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	color: #004d99;
+}
+
+/* ========== 내용 제목 ========== */
+body.youth-policy h3 {
+	color: #333;
+	margin-top: 25px;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+/* ========== 섹션 및 본문 ========== */
+body.youth-policy .policy-section {
+	margin-bottom: 20px;
+}
+
+body.youth-policy .policy-section p {
+	margin-left: 0;
+	text-indent: -20px;
+	padding-left: 20px;
+}
+
+/* ========== 주요 활동 목록 ========== */
+body.youth-policy .policy-activities ol {
+	margin-left: 20px;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+body.youth-policy .policy-activities ol li {
+	margin-bottom: 15px;
+	padding-left: 20px;
+	text-indent: -20px;
+}
+
+body.youth-policy .policy-activities ol li strong {
+	font-weight: bold;
+	color: #000;
+}
+
+/* ========== 담당자 정보 제목 ========== */
+body.youth-policy .responsible-title {
+	color: #004d99;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+/* ========== 담당자 정보 목록 ========== */
+body.youth-policy .responsible-list {
+	list-style-type: none;
+	padding-left: 20px;
+	margin-top: 0;
+}
+
+body.youth-policy .responsible-list li {
+	margin-bottom: 3px;
+}
+
+body.youth-policy .responsible-list a {
+	color: #004d99;
+	text-decoration: none;
+}
+
+body.youth-policy .responsible-list a:hover {
+	text-decoration: underline;
+}
+
+/* ========== 반응형 ========== */
+@media ( max-width : 768px) {
+	body.youth-policy .policy-container {
+		width: 95%;
+		padding: 16px;
+	}
+	body.youth-policy h1 {
+		font-size: 1.6em;
+	}
+	body.youth-policy h3 {
+		font-size: 1em;
+	}
+	body.youth-policy .policy-activities ol li {
+		font-size: 0.95em;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.youth-policy .policy-container {
+		margin: 20px auto;
+		padding: 12px;
+	}
+	body.youth-policy h1 {
+		font-size: 1.4em;
+	}
+	body.youth-policy h3 {
+		font-size: 0.95em;
+	}
+}

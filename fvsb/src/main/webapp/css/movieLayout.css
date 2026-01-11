@@ -1,0 +1,1152 @@
+@charset "UTF-8";
+
+/* ========================================================
+   영화 상세 페이지 전용 스타일
+   (body.movie-detail 클래스가 있을 때만 적용)
+   ======================================================== */
+body.movie-detail {
+	background: #fafafa;
+}
+
+body.movie-detail main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 40px 40px 100px;
+}
+
+/* ========== 영화 헤더 섹션 ========== */
+body.movie-detail .movie-header {
+	display: flex;
+	gap: 40px;
+	background: #ffffff;
+	padding: 40px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	margin-bottom: 24px;
+}
+
+body.movie-detail .movie-poster {
+	flex-shrink: 0;
+}
+
+body.movie-detail .movie-poster img {
+	width: 240px;
+	height: 360px;
+	object-fit: cover;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.movie-detail .movie-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+body.movie-detail .movie-title {
+	font-size: 32px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin: 0 0 16px;
+	letter-spacing: -0.5px;
+}
+
+body.movie-detail .movie-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 16px;
+	margin-bottom: 24px;
+	font-size: 14px;
+	color: #666666;
+}
+
+body.movie-detail .movie-meta span {
+	display: inline-flex;
+	align-items: center;
+}
+
+body.movie-detail .movie-meta span::after {
+	content: '·';
+	margin-left: 16px;
+	color: #d9d9d9;
+}
+
+body.movie-detail .movie-meta span:last-child::after {
+	display: none;
+}
+
+/* ========== 평점 + 버튼 라인 ========== */
+body.movie-detail .movie-rating-actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	margin-bottom: 24px;
+	gap: 20px;
+}
+
+body.movie-detail .movie-rating {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+body.movie-detail .rating-stars img {
+	height: 24px;
+	width: auto;
+}
+
+body.movie-detail .rating-text {
+	font-size: 18px;
+	font-weight: 600;
+	color: #333333;
+}
+
+body.movie-detail .rating-count {
+	font-size: 14px;
+	color: #999999;
+	margin-left: 4px;
+}
+
+/* ========== 액션 버튼 영역 ========== */
+body.movie-detail .movie-actions {
+	display: flex;
+	gap: 8px;
+	flex-shrink: 0;
+}
+
+body.movie-detail .btn-review {
+	background: #ff2f6e;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	padding: 12px 28px;
+	font-size: 15px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+body.movie-detail .btn-review:hover {
+	background: #e02859;
+}
+
+body.movie-detail .btn-like {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: #ffffff;
+	color: #666666;
+	border: 1px solid #e6e6e6;
+	border-radius: 6px;
+	padding: 12px 24px;
+	font-size: 15px;
+	font-weight: 500;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+body.movie-detail .btn-like:hover {
+	border-color: #ff2f6e;
+	color: #ff2f6e;
+}
+
+body.movie-detail .btn-like img {
+	width: 20px;
+	height: 20px;
+}
+
+/* ========== 줄거리 ========== */
+body.movie-detail .movie-story {
+	font-size: 15px;
+	line-height: 1.8;
+	color: #333333;
+}
+
+/* ========== 출연 배우 섹션 ========== */
+body.movie-detail .movie-cast {
+	background: #ffffff;
+	padding: 40px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+body.movie-detail .section-title {
+	font-size: 20px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin: 0 0 24px;
+	letter-spacing: -0.3px;
+}
+
+body.movie-detail .cast-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 24px;
+}
+
+body.movie-detail .cast-card {
+	text-align: center;
+}
+
+body.movie-detail .cast-card a {
+	text-decoration: none;
+	display: block;
+	transition: opacity 0.2s;
+}
+
+body.movie-detail .cast-card a:hover {
+	opacity: 0.85;
+}
+
+body.movie-detail .cast-card img {
+	width: 100%;
+	aspect-ratio: 2/3;
+	object-fit: cover;
+	border-radius: 6px;
+	margin-bottom: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+body.movie-detail .cast-name {
+	font-size: 14px;
+	font-weight: 500;
+	color: #333333;
+	line-height: 1.4;
+}
+
+body.movie-detail .cast-empty {
+	text-align: center;
+	padding: 60px 20px;
+	color: #999999;
+	font-size: 15px;
+	grid-column: 1/-1;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.movie-detail main {
+		padding: 32px 30px 80px;
+	}
+	body.movie-detail .movie-header {
+		padding: 32px;
+		gap: 32px;
+	}
+	body.movie-detail .movie-poster img {
+		width: 200px;
+		height: 300px;
+	}
+	body.movie-detail .movie-title {
+		font-size: 28px;
+	}
+	body.movie-detail .cast-grid {
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		gap: 20px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.movie-detail main {
+		padding: 24px 20px 60px;
+	}
+	body.movie-detail .movie-header {
+		flex-direction: column;
+		padding: 28px 24px;
+		gap: 24px;
+	}
+	body.movie-detail .movie-poster {
+		display: flex;
+		justify-content: center;
+	}
+	body.movie-detail .movie-poster img {
+		width: 180px;
+		height: 270px;
+	}
+	body.movie-detail .movie-title {
+		font-size: 24px;
+		margin-bottom: 12px;
+	}
+	body.movie-detail .movie-meta {
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+	body.movie-detail .movie-rating-actions {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 16px 0;
+		margin-bottom: 20px;
+		gap: 16px;
+	}
+	body.movie-detail .movie-rating {
+		width: 100%;
+	}
+	body.movie-detail .rating-stars img {
+		height: 20px;
+	}
+	body.movie-detail .rating-text {
+		font-size: 16px;
+	}
+	body.movie-detail .movie-actions {
+		width: 100%;
+	}
+	body.movie-detail .btn-review, body.movie-detail .btn-like {
+		flex: 1;
+		justify-content: center;
+		padding: 11px 20px;
+		font-size: 14px;
+	}
+	body.movie-detail .movie-story {
+		font-size: 14px;
+		line-height: 1.7;
+	}
+	body.movie-detail .movie-cast {
+		padding: 28px 24px;
+	}
+	body.movie-detail .section-title {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	body.movie-detail .cast-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px;
+	}
+	body.movie-detail .cast-name {
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.movie-detail main {
+		padding: 20px 15px 60px;
+	}
+	body.movie-detail .movie-header {
+		padding: 24px 20px;
+	}
+	body.movie-detail .movie-poster img {
+		width: 160px;
+		height: 240px;
+	}
+	body.movie-detail .movie-title {
+		font-size: 20px;
+	}
+	body.movie-detail .movie-meta {
+		font-size: 12px;
+		gap: 6px 12px;
+	}
+	body.movie-detail .movie-meta span::after {
+		margin-left: 12px;
+	}
+	body.movie-detail .rating-stars img {
+		height: 18px;
+	}
+	body.movie-detail .rating-text {
+		font-size: 15px;
+	}
+	body.movie-detail .rating-count {
+		font-size: 13px;
+	}
+	body.movie-detail .btn-review, body.movie-detail .btn-like {
+		padding: 10px 20px;
+		font-size: 13px;
+	}
+	body.movie-detail .movie-story {
+		font-size: 13px;
+	}
+	body.movie-detail .movie-cast {
+		padding: 24px 20px;
+	}
+	body.movie-detail .section-title {
+		font-size: 17px;
+	}
+	body.movie-detail .cast-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+	}
+	body.movie-detail .cast-name {
+		font-size: 12px;
+	}
+	body.movie-detail .cast-empty {
+		padding: 50px 20px;
+		font-size: 14px;
+	}
+}
+/* ========================================================
+   영화 목록 페이지 전용 스타일
+   (body.movie-list 클래스s가 있을 때만 적용)
+   ======================================================== */
+body.movie-list main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px;
+	box-sizing: border-box;
+}
+
+body.movie-list main section h2 {
+	font-size: 24px;
+	font-weight: 600;
+	color: #1a1a1a;
+	text-align: center;
+	margin: 0 0 32px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+body.movie-list fieldset {
+	border: none;
+	margin: 0 0 40px;
+	padding: 0 0 10px;
+}
+
+body.movie-list fieldset h2 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin: 0 0 20px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+/* 공통 테이블 */
+body.movie-list #movielisttable, body.movie-list #randommovietable {
+	margin: 0 auto;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+/* 영화 카드 셀 공통 */
+body.movie-list td.movielist, body.movie-list td.koreamovielist, body.movie-list td.foreignmovielist
+	{
+	padding: 16px 14px;
+	text-align: center;
+	vertical-align: top;
+}
+
+/* 영화 포스터 이미지 */
+body.movie-list td.movielist img, body.movie-list td.koreamovielist img,
+	body.movie-list td.foreignmovielist img, body.movie-list #randommovietable td.movielist img
+	{
+	display: block;
+	margin: 0 auto 8px;
+	width: 180px;
+	height: 270px;
+	object-fit: cover;
+	border: 1px solid #e6e6e6;
+}
+
+/* 영화 제목/텍스트 */
+body.movie-list td.movielist div, body.movie-list td.koreamovielist div,
+	body.movie-list td.foreignmovielist div {
+	margin-top: 6px;
+	font-size: 14px;
+	color: #666666;
+	line-height: 1.5;
+}
+
+body.movie-list td.movielist div:first-of-type, body.movie-list td.koreamovielist div:first-of-type,
+	body.movie-list td.foreignmovielist div:first-of-type {
+	font-weight: 500;
+	font-size: 15px;
+	color: #1a1a1a;
+	margin-top: 10px;
+}
+
+/* 랜덤 추천 영역 테이블 */
+body.movie-list #randommovietable td.movielist {
+	padding: 20px 0;
+}
+
+/* 빈 데이터 메시지 */
+body.movie-list td[colspan="1"], body.movie-list td[colspan="1"][align="center"]
+	{
+	padding: 30px 10px;
+	text-align: center;
+	font-size: 14px;
+	color: #999999;
+}
+
+/* ===== 페이징 화살표 ===== */
+body.movie-list td[width="80"] {
+	text-align: center;
+	padding: 16px 8px;
+	vertical-align: middle;
+}
+
+body.movie-list td[width="80"] a {
+	display: inline-block;
+	transition: opacity 0.2s;
+}
+
+body.movie-list td[width="80"] a:hover {
+	opacity: 0.7;
+}
+
+body.movie-list td[width="80"] a img {
+	width: 20px;
+	height: auto;
+	vertical-align: middle;
+}
+
+/* (필요하면) 페이지 번호 영역이 따로 생기면 여기에 스타일 추가 */
+
+/* ========== 반응형 ========== */
+@media ( max-width : 1024px) {
+	body.movie-list main {
+		padding: 50px 30px;
+	}
+	body.movie-list main section h2 {
+		font-size: 22px;
+		margin-bottom: 28px;
+	}
+	body.movie-list td.movielist img, body.movie-list td.koreamovielist img,
+		body.movie-list td.foreignmovielist img {
+		width: 160px;
+		height: 240px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.movie-list main {
+		padding: 40px 20px;
+	}
+	body.movie-list main section h2 {
+		font-size: 20px;
+		margin-bottom: 24px;
+	}
+	body.movie-list td.movielist, body.movie-list td.koreamovielist, body.movie-list td.foreignmovielist
+		{
+		padding: 14px 10px;
+	}
+	body.movie-list td.movielist img, body.movie-list td.koreamovielist img,
+		body.movie-list td.foreignmovielist img {
+		width: 140px;
+		height: 210px;
+	}
+	body.movie-list td[width="80"] a img {
+		width: 18px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.movie-list main {
+		padding: 32px 15px;
+	}
+	body.movie-list main section h2 {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	/* 한 줄에 카드 많이 못 넣을 때 여백 줄이기 */
+	body.movie-list td.movielist, body.movie-list td.koreamovielist, body.movie-list td.foreignmovielist
+		{
+		padding: 10px 6px;
+	}
+	body.movie-list td.movielist img, body.movie-list td.koreamovielist img,
+		body.movie-list td.foreignmovielist img {
+		width: 120px;
+		height: 180px;
+	}
+	body.movie-list td[width="80"] {
+		padding: 10px 4px;
+	}
+	body.movie-list td[width="80"] a img {
+		width: 16px;
+	}
+}
+
+/* ========================================================
+   영화 등록 폼 전용 스타일
+   (body.movie-form 클래스가 있을 때만 적용)
+   ======================================================== */
+body.movie-form main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+	box-sizing: border-box;
+}
+
+body.movie-form main section {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+body.movie-form main h2 {
+	text-align: center;
+	font-size: 26px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 36px;
+	letter-spacing: -0.5px;
+}
+
+/* ===== 폼 카드 ===== */
+body.movie-form main article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.movie-form main article form {
+	padding: 0;
+}
+
+body.movie-form #movieregistertable {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body.movie-form #movieregistertable tr {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+/* 왼쪽 라벨 셀 */
+body.movie-form #movieregistertable td:first-child {
+	padding: 18px 24px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	background: #fafafa;
+	width: 15%;
+	vertical-align: middle;
+}
+
+/* 오른쪽 입력 영역 */
+body.movie-form #movieregistertable td:last-child {
+	padding: 18px 24px;
+	font-size: 14px;
+	color: #333333;
+}
+
+/* ===== 입력 필드 공통 ===== */
+body.movie-form #movieregistertable input[type="text"], body.movie-form #movieregistertable input[type="date"],
+	body.movie-form #movieregistertable select, body.movie-form #movieregistertable textarea
+	{
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	font-family: inherit;
+	box-sizing: border-box;
+}
+
+body.movie-form #movieregistertable input[type="text"], body.movie-form #movieregistertable input[type="date"],
+	body.movie-form #movieregistertable select {
+	width: 260px;
+	max-width: 100%;
+}
+
+body.movie-form #movieregistertable textarea {
+	width: 100%;
+	min-height: 120px;
+	resize: vertical;
+}
+
+/* 포커스 시 */
+body.movie-form #movieregistertable input[type="text"]:focus, body.movie-form #movieregistertable input[type="date"]:focus,
+	body.movie-form #movieregistertable select:focus, body.movie-form #movieregistertable textarea:focus
+	{
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* 파일 입력 */
+body.movie-form #movieregistertable input[type="file"] {
+	padding: 6px 0;
+	font-size: 14px;
+}
+
+/* ===== 장르 체크박스 영역 ===== */
+body.movie-form #movieregistertable .genre-cell {
+	padding: 18px 24px !important;
+	vertical-align: middle !important;
+	background: #ffffff !important; /* 배경색 통일 */
+	font-weight: normal !important; /* 볼드 제거 */
+	color: #333333 !important; /* 텍스트 색상 통일 */
+}
+
+body.movie-form #movieregistertable .genre-item {
+	display: inline-block;
+	margin-right: 12px; /* 간격 줄임 */
+	margin-bottom: 8px;
+	white-space: nowrap;
+}
+
+body.movie-form #movieregistertable .genre-item input[type="checkbox"] {
+	margin-right: 3px; /* 간격 줄임 */
+	vertical-align: middle;
+}
+
+body.movie-form #movieregistertable .genre-item label {
+	font-size: 13px; /* 폰트 크기 줄임 */
+	color: #333333;
+	cursor: pointer;
+	vertical-align: middle;
+	font-weight: normal; /* 볼드 제거 */
+}
+
+/* ===== 버튼 영역 ===== */
+body.movie-form #movieregistertable tr:last-child {
+	border-bottom: none;
+}
+
+body.movie-form #movieregistertable tr:last-child td {
+	text-align: center;
+	padding: 28px 24px;
+	background: #fafafa;
+	border-top: 2px solid #f0f0f0;
+}
+
+body.movie-form #movieregistertable input[type="submit"], body.movie-form #movieregistertable input[type="reset"]
+	{
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 0 6px;
+	transition: background 0.2s, color 0.2s;
+}
+
+body.movie-form #movieregistertable input[type="submit"] {
+	background: #ff2f6e;
+	color: #ffffff;
+}
+
+body.movie-form #movieregistertable input[type="submit"]:hover {
+	background: #e02859;
+}
+
+body.movie-form #movieregistertable input[type="reset"] {
+	background: #f0f0f0;
+	color: #666666;
+}
+
+body.movie-form #movieregistertable input[type="reset"]:hover {
+	background: #e6e6e6;
+}
+
+/* ===== 반응형 ===== */
+@media ( max-width : 1024px) {
+	body.movie-form main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.movie-form main {
+		padding: 40px 20px 60px;
+	}
+	body.movie-form main section {
+		max-width: 100%;
+	}
+	body.movie-form main h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	body.movie-form #movieregistertable td:first-child, body.movie-form #movieregistertable td:last-child
+		{
+		padding: 14px 16px;
+		font-size: 13px;
+	}
+	body.movie-form #movieregistertable .genre-cell {
+		padding: 14px 16px !important;
+		background: #ffffff !important;
+		font-weight: normal !important;
+		color: #333333 !important;
+	}
+	body.movie-form #movieregistertable .genre-item {
+		margin-right: 12px;
+		margin-bottom: 6px;
+	}
+	body.movie-form #movieregistertable .genre-item label {
+		font-size: 13px;
+		font-weight: normal;
+	}
+	body.movie-form #movieregistertable input[type="text"], body.movie-form #movieregistertable input[type="date"],
+		body.movie-form #movieregistertable select {
+		width: 100%;
+		max-width: 320px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.movie-form main {
+		padding: 40px 15px 60px;
+	}
+	body.movie-form main h2 {
+		font-size: 22px;
+	}
+	/* 모바일에서 라벨/입력 세로 쌓기 */
+	body.movie-form #movieregistertable td:first-child, body.movie-form #movieregistertable td:last-child
+		{
+		display: block;
+		width: 100%;
+		padding: 12px 16px;
+	}
+	body.movie-form #movieregistertable td:first-child {
+		padding-bottom: 6px;
+		border-bottom: none;
+	}
+	body.movie-form #movieregistertable td:last-child {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.movie-form #movieregistertable .genre-cell {
+		display: block !important;
+		width: 100% !important;
+		padding: 12px 16px !important;
+		background: #ffffff !important;
+		font-weight: normal !important;
+		color: #333333 !important;
+	}
+	body.movie-form #movieregistertable .genre-item {
+		display: inline-block;
+		margin-right: 10px;
+		margin-bottom: 8px;
+	}
+	body.movie-form #movieregistertable .genre-item label {
+		font-size: 13px;
+		font-weight: normal;
+	}
+	body.movie-form #movieregistertable tr {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.movie-form #movieregistertable input[type="text"], body.movie-form #movieregistertable input[type="date"],
+		body.movie-form #movieregistertable select, body.movie-form #movieregistertable textarea
+		{
+		width: 100%;
+	}
+	body.movie-form #movieregistertable tr:last-child td {
+		padding: 20px 16px;
+	}
+	body.movie-form #movieregistertable input[type="submit"], body.movie-form #movieregistertable input[type="reset"]
+		{
+		width: 48%;
+		padding: 10px 16px;
+		font-size: 13px;
+	}
+}
+
+/* ========================================================
+   영화 팝업 전용 스타일
+   (body.movie-popup 클래스가 있을 때만 적용)
+   ======================================================== */
+body.movie-popup {
+	background: #ffffff;
+	color: #1a1a1a;
+	margin: 0;
+	padding: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
+}
+
+/* ===== 팝업 래퍼 ===== */
+body.movie-popup .popup-wrapper {
+	width: 360px;
+	padding: 16px 18px 12px;
+	box-sizing: border-box;
+}
+
+/* ===== 제목 ===== */
+body.movie-popup h2 {
+	margin: 0 0 12px 0;
+	font-size: 18px;
+	font-weight: 600;
+	color: #1a1a1a;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #f0f0f0;
+	letter-spacing: -0.3px;
+}
+
+/* ===== 설명 텍스트 ===== */
+body.movie-popup .popup-desc {
+	font-size: 13px;
+	color: #666666;
+	margin-bottom: 10px;
+}
+
+/* ===== 영화 목록 ===== */
+body.movie-popup ul.popup-movie-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0 0 12px 0;
+	max-height: 380px;
+	overflow-y: auto;
+	border: 1px solid #e6e6e6;
+	border-radius: 6px;
+	background: #ffffff;
+}
+
+/* 항목 */
+body.movie-popup ul.popup-movie-list li {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #f5f5f5;
+	font-size: 14px;
+}
+
+body.movie-popup ul.popup-movie-list li:last-child {
+	border-bottom: none;
+}
+
+/* 링크 */
+body.movie-popup ul.popup-movie-list li a {
+	display: block;
+	padding: 9px 12px;
+	text-decoration: none;
+	color: #333333;
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+body.movie-popup ul.popup-movie-list li a:hover {
+	background-color: #fff8fa;
+	color: #ff2f6e;
+}
+
+/* ===== 비어있음 ===== */
+body.movie-popup .popup-empty {
+	font-size: 14px;
+	color: #999999;
+	margin: 16px 0 12px;
+	text-align: center;
+}
+
+/* ===== 버튼 영역 ===== */
+body.movie-popup .popup-btn-area {
+	text-align: right;
+	margin-top: 8px;
+}
+
+body.movie-popup .popup-btn-area button {
+	padding: 8px 16px;
+	font-size: 13px;
+	cursor: pointer;
+	border-radius: 6px;
+	border: 1px solid #e6e6e6;
+	background: #ffffff;
+	color: #333333;
+	font-weight: 500;
+	transition: all 0.2s;
+}
+
+body.movie-popup .popup-btn-area button:hover {
+	border-color: #ff2f6e;
+	color: #ff2f6e;
+	box-shadow: 0 2px 6px rgba(255, 47, 110, 0.18);
+}
+
+/* ===== 스크롤바 ===== */
+body.movie-popup ul.popup-movie-list::-webkit-scrollbar {
+	width: 6px;
+}
+
+body.movie-popup ul.popup-movie-list::-webkit-scrollbar-track {
+	background: #f5f5f5;
+}
+
+body.movie-popup ul.popup-movie-list::-webkit-scrollbar-thumb {
+	background: #d9d9d9;
+	border-radius: 3px;
+}
+
+body.movie-popup ul.popup-movie-list::-webkit-scrollbar-thumb:hover {
+	background: #bfbfbf;
+}
+
+/* ===== 반응형 (작은 팝업) ===== */
+@media ( max-width : 480px) {
+	body.movie-popup {
+		padding: 12px;
+	}
+	body.movie-popup .popup-wrapper {
+		width: 100%;
+		padding: 12px 14px 10px;
+	}
+	body.movie-popup h2 {
+		font-size: 17px;
+		padding-bottom: 8px;
+		margin-bottom: 10px;
+	}
+	body.movie-popup ul.popup-movie-list {
+		max-height: 320px;
+	}
+	body.movie-popup ul.popup-movie-list li {
+		font-size: 13px;
+	}
+	body.movie-popup .popup-btn-area button {
+		padding: 7px 14px;
+		font-size: 12px;
+	}
+}
+
+/* ========================================================
+   영화 미리보기 전용 스타일
+   (body.movie-preview-popup 클래스가 있을 때만 적용)
+   ======================================================== */
+body.movie-preview-popup main {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 40px 40px 60px;
+	box-sizing: border-box;
+}
+
+body.movie-preview-popup section {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/* ========== 영화 상세 카드 ========== */
+body.movie-preview-popup #movieDetail {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.movie-preview-popup #movieDetail fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+body.movie-preview-popup .moviedetailtable {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+/* 상단 타이틀 영역 */
+body.movie-preview-popup .moviedetailtable thead tr:first-child td {
+	background: #fafafa;
+	border-bottom: 2px solid #f0f0f0;
+	padding: 20px 24px 16px;
+}
+
+body.movie-preview-popup .moviedetailtable thead h2 {
+	margin: 0;
+	font-size: 22px;
+	font-weight: 600;
+	color: #1a1a1a;
+	letter-spacing: -0.3px;
+}
+
+/* 포스터 + 오른쪽 정보 레이아웃 */
+body.movie-preview-popup .moviedetailtable thead tr:nth-child(2) td {
+	padding: 20px 24px 10px;
+	vertical-align: top;
+}
+
+body.movie-preview-popup #detail0 {
+	width: 200px;
+}
+
+body.movie-preview-popup #detailimg {
+	width: 190px;
+	height: 280px;
+	object-fit: cover;
+	border-radius: 8px;
+	border: 1px solid #e6e6e6;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+	display: block;
+}
+
+body.movie-preview-popup #detail1 {
+	width: 20px;
+}
+
+body.movie-preview-popup #detail2 {
+	font-size: 14px;
+	color: #666666;
+}
+
+/* ========== 정보 영역 ========== */
+body.movie-preview-popup .moviedetailtable tbody tr {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.movie-preview-popup .moviedetailtable tbody tr:last-child {
+	border-bottom: none;
+}
+
+body.movie-preview-popup .moviedetailtable tbody td {
+	padding: 14px 24px;
+	font-size: 15px;
+	color: #333333;
+}
+
+/* 라벨 강조용 */
+body.movie-preview-popup .moviedetailtable tbody td .label {
+	display: inline-block;
+	min-width: 60px;
+	font-weight: 600;
+	color: #666666;
+}
+
+/* ========== 반응형 ========== */
+@media ( max-width : 1024px) {
+	body.movie-preview-popup main {
+		padding: 40px 30px 50px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.movie-preview-popup main {
+		padding: 30px 20px 40px;
+	}
+	body.movie-preview-popup section {
+		max-width: 100%;
+	}
+	body.movie-preview-popup .moviedetailtable thead tr:nth-child(2) td {
+		padding: 16px 18px 8px;
+	}
+	body.movie-preview-popup #detail0, body.movie-preview-popup #detailimg {
+		width: 150px;
+		height: 220px;
+	}
+	body.movie-preview-popup .moviedetailtable thead h2 {
+		font-size: 20px;
+	}
+	body.movie-preview-popup .moviedetailtable tbody td {
+		padding: 12px 18px;
+		font-size: 14px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.movie-preview-popup main {
+		padding: 24px 15px 36px;
+	}
+
+	/* 포스터/정보 수직 배치 */
+	body.movie-preview-popup .moviedetailtable thead tr:nth-child(2) td {
+		display: block;
+		width: 100%;
+		padding: 14px 16px 6px;
+	}
+	body.movie-preview-popup #detail0 {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	body.movie-preview-popup #detailimg {
+		width: 160px;
+		height: 230px;
+		margin: 0 auto;
+	}
+	body.movie-preview-popup #detail1 {
+		display: none;
+	}
+	body.movie-preview-popup .moviedetailtable tbody td {
+		padding: 10px 16px;
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,683 @@
+@charset "UTF-8";
+
+/* ========================================================
+   문의 리스트 페이지 전용 스타일
+   ======================================================== */
+body.qna-list main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+}
+
+body.qna-list section {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+body.qna-list h2 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 40px;
+	letter-spacing: -0.5px;
+}
+
+/* ========== 글쓰기 버튼 ========== */
+body.qna-list .write-btn-wrapper {
+	text-align: right;
+	margin-bottom: 16px;
+}
+
+body.qna-list .write-btn-wrapper a {
+	display: inline-block;
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 24px;
+	border-radius: 6px;
+	font-weight: 500;
+	text-decoration: none;
+	font-size: 14px;
+	transition: background 0.2s;
+}
+
+body.qna-list .write-btn-wrapper a:hover {
+	background: #e02859;
+}
+
+/* ========== 게시판 테이블 ========== */
+body.qna-list article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.qna-list article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+/* 테이블 헤더 */
+body.qna-list article table thead {
+	background: #fafafa;
+	border-bottom: 2px solid #f0f0f0;
+}
+
+body.qna-list article table th {
+	padding: 16px 12px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	letter-spacing: 0.3px;
+}
+
+body.qna-list article table th:nth-child(1) {
+	width: 10%;
+}
+
+body.qna-list article table th:nth-child(2) {
+	width: 50%;
+}
+
+body.qna-list article table th:nth-child(3) {
+	width: 15%;
+}
+
+body.qna-list article table th:nth-child(4) {
+	width: 25%;
+}
+
+/* 테이블 바디 */
+body.qna-list article table tbody tr {
+	border-bottom: 1px solid #f0f0f0;
+	transition: background 0.2s;
+}
+
+body.qna-list article table tbody tr:hover {
+	background: #fff8fa;
+}
+
+body.qna-list article table td {
+	padding: 16px 12px;
+	text-align: center;
+	font-size: 14px;
+	color: #333333;
+}
+
+body.qna-list article table td:nth-child(2) {
+	text-align: left;
+}
+
+body.qna-list article table td a {
+	color: #333333;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+body.qna-list article table td a:hover {
+	color: #ff2f6e;
+}
+
+/* 등록된 글 없음 */
+body.qna-list article table tbody tr td[colspan] {
+	padding: 60px 12px;
+	text-align: center;
+	color: #999999;
+	font-size: 15px;
+}
+
+/* ========== 페이지네이션 ========== */
+body.qna-list article table tfoot {
+	background: #ffffff;
+	border-top: 2px solid #f0f0f0;
+}
+
+body.qna-list article table tfoot tr {
+	border: none;
+}
+
+body.qna-list article table tfoot td {
+	padding: 20px 12px;
+	text-align: center;
+}
+
+body.qna-list article table tfoot a {
+	display: inline-block;
+	padding: 8px 12px;
+	margin: 0 2px;
+	color: #666666;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: all 0.2s;
+	font-size: 14px;
+}
+
+body.qna-list article table tfoot a:hover {
+	background: #fff8fa;
+	color: #ff2f6e;
+}
+
+/* ========== 반응형 ========== */
+@media ( max-width : 1024px) {
+	body.qna-list main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.qna-list main {
+		padding: 40px 20px 60px;
+	}
+	body.qna-list h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	body.qna-list article table th, body.qna-list article table td {
+		padding: 12px 8px;
+		font-size: 13px;
+	}
+	body.qna-list article table th:nth-child(1), body.qna-list article table td:nth-child(1)
+		{
+		display: none;
+	}
+	body.qna-list article table th:nth-child(3), body.qna-list article table td:nth-child(3)
+		{
+		width: 20%;
+	}
+	body.qna-list article table th:nth-child(4), body.qna-list article table td:nth-child(4)
+		{
+		width: 30%;
+		font-size: 12px;
+	}
+	body.qna-list article table tfoot td {
+		padding: 16px 8px;
+	}
+	body.qna-list article table tfoot a {
+		padding: 6px 10px;
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.qna-list main {
+		padding: 40px 20px 60px;
+	}
+	body.qna-list h2 {
+		font-size: 20px;
+	}
+	body.qna-list article table th, body.qna-list article table td {
+		padding: 10px 6px;
+		font-size: 12px;
+	}
+	body.qna-list article table th:nth-child(4), body.qna-list article table td:nth-child(4)
+		{
+		display: none;
+	}
+	body.qna-list article table tfoot a {
+		padding: 6px 8px;
+		margin: 0 1px;
+		font-size: 12px;
+	}
+}
+
+/* ========================================================
+   문의 목록 페이지 전용 스타일
+   ======================================================== */
+body.qna-content main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+}
+
+body.qna-content section {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+body.qna-content h2 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 40px;
+	letter-spacing: -0.5px;
+}
+
+/* ========== 게시글 상세 테이블 ========== */
+body.qna-content article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.qna-content article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+/* 테이블 헤더 */
+body.qna-content article table thead {
+	background: #fafafa;
+}
+
+body.qna-content article table th {
+	padding: 14px 16px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	background: #fafafa;
+	border-bottom: 1px solid #f0f0f0;
+	width: 15%;
+}
+
+body.qna-content article table td {
+	padding: 14px 16px;
+	font-size: 14px;
+	color: #333333;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+/* 첫 번째 행 (번호) */
+body.qna-content article table thead tr:first-child th {
+	background: #fafafa;
+}
+
+body.qna-content article table thead tr:first-child td {
+	font-weight: 600;
+	color: #1a1a1a;
+}
+
+/* 날짜/작성자 행 */
+body.qna-content article table thead tr:nth-child(2) th {
+	width: 15%;
+}
+
+body.qna-content article table thead tr:nth-child(2) td {
+	width: 35%;
+}
+
+/* 제목 행 */
+body.qna-content article table thead tr:nth-child(3) td {
+	text-align: left;
+	font-weight: 500;
+}
+
+/* 내용 */
+body.qna-content article table tbody tr th {
+	vertical-align: top;
+	padding-top: 20px;
+}
+
+body.qna-content article table tbody tr td {
+	text-align: left;
+	padding: 20px 16px;
+	line-height: 1.8;
+	min-height: 200px;
+}
+
+/* 버튼 영역 */
+body.qna-content article table tbody tr:last-child td {
+	text-align: center;
+	padding: 24px 16px;
+	background: #fafafa;
+	border-top: 2px solid #f0f0f0;
+	border-bottom: none;
+}
+
+body.qna-content article table input[type="button"] {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 24px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.qna-content article table input[type="button"]:hover {
+	background: #e02859;
+}
+
+body.qna-content article table input[type="button"]:first-child {
+	background: #f0f0f0;
+	color: #666666;
+}
+
+body.qna-content article table input[type="button"]:first-child:hover {
+	background: #e6e6e6;
+}
+
+/* ========== 반응형 ========== */
+@media ( max-width : 1024px) {
+	body.qna-content main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.qna-content main {
+		padding: 40px 20px 60px;
+	}
+	body.qna-content h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	body.qna-content article table th, body.qna-content article table td {
+		padding: 12px;
+		font-size: 13px;
+	}
+	body.qna-content article table tbody tr td {
+		padding: 16px 12px;
+	}
+	body.qna-content article table input[type="button"] {
+		padding: 8px 20px;
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.qna-content main {
+		padding: 40px 20px 60px;
+	}
+	body.qna-content h2 {
+		font-size: 20px;
+	}
+	body.qna-content article table th, body.qna-content article table td {
+		padding: 10px 8px;
+		font-size: 12px;
+	}
+	/* 모바일에서 테이블 재배치 */
+	body.qna-content article table thead tr:nth-child(2) {
+		display: flex;
+		flex-direction: column;
+	}
+	body.qna-content article table thead tr:nth-child(2) th, body.qna-content article table thead tr:nth-child(2) td
+		{
+		width: 100%;
+		display: block;
+	}
+	body.qna-content article table tbody tr td {
+		padding: 12px 8px;
+		min-height: 150px;
+	}
+	body.qna-content article table input[type="button"] {
+		padding: 8px 16px;
+		font-size: 12px;
+		margin: 5px 3px;
+	}
+}
+/* ========================================================
+   문의 게시글 작성 페이지 전용 (body.qna-write) 글쓰기/답변 전용 (body.qna-rewrite)
+   ======================================================== */
+body.qna-write main, body.qna-rewrite main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+}
+
+body.qna-write section, body.qna-rewrite section {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+body.qna-write h2, body.qna-rewrite h2 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 40px;
+	letter-spacing: -0.5px;
+}
+
+/* ========== 글쓰기 폼 (공통) ========== */
+body.qna-write article, body.qna-rewrite article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.qna-write article form, body.qna-rewrite article form {
+	padding: 0;
+}
+
+body.qna-write article table, body.qna-rewrite article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body.qna-write article table th, body.qna-rewrite article table th {
+	padding: 16px 20px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	background: #fafafa;
+	border-bottom: 1px solid #f0f0f0;
+	width: 15%;
+}
+
+body.qna-write article table td, body.qna-rewrite article table td {
+	padding: 16px 20px;
+	font-size: 14px;
+	color: #333333;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+/* 작성자 행 */
+body.qna-write article table tr:first-child th, body.qna-rewrite article table tr:first-child th
+	{
+	text-align: center;
+}
+
+body.qna-write article table tr:first-child td, body.qna-rewrite article table tr:first-child td
+	{
+	font-weight: 500;
+	color: #1a1a1a;
+}
+
+/* 제목 입력 */
+body.qna-write .titletext, body.qna-rewrite .titletext {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+}
+
+body.qna-write .titletext:focus, body.qna-rewrite .titletext:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* 내용 입력 */
+body.qna-write article table tr:nth-child(3) td, body.qna-rewrite article table tr:nth-child(3) td
+	{
+	padding: 20px;
+}
+
+body.qna-write .commentBox, body.qna-rewrite .commentBox {
+	width: 100%;
+	min-height: 250px;
+	padding: 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 1.6;
+	resize: vertical;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
+	transition: border-color 0.2s;
+}
+
+body.qna-write .commentBox:focus, body.qna-rewrite .commentBox:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* 버튼 영역 */
+body.qna-write article table tr:last-child td, body.qna-rewrite article table tr:last-child td
+	{
+	text-align: center;
+	padding: 24px 20px;
+	background: #fafafa;
+	border-top: 2px solid #f0f0f0;
+	border-bottom: none;
+}
+
+body.qna-write article table input[type="submit"], body.qna-rewrite article table input[type="submit"]
+	{
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 24px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.qna-write article table input[type="submit"]:hover, body.qna-rewrite article table input[type="submit"]:hover
+	{
+	background: #e02859;
+}
+
+body.qna-write article table input[type="reset"], body.qna-rewrite article table input[type="reset"]
+	{
+	background: #f0f0f0;
+	color: #666666;
+	padding: 10px 24px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.qna-write article table input[type="reset"]:hover, body.qna-rewrite article table input[type="reset"]:hover
+	{
+	background: #e6e6e6;
+}
+
+body.qna-write article table input[type="button"], body.qna-rewrite article table input[type="button"]
+	{
+	background: #f0f0f0;
+	color: #666666;
+	padding: 10px 24px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.qna-write article table input[type="button"]:hover, body.qna-rewrite article table input[type="button"]:hover
+	{
+	background: #e6e6e6;
+}
+
+/* ========== 반응형 (공통) ========== */
+@media ( max-width : 1024px) {
+	body.qna-write main, body.qna-rewrite main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.qna-write main, body.qna-rewrite main {
+		padding: 40px 20px 60px;
+	}
+	body.qna-write h2, body.qna-rewrite h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	body.qna-write article table th, body.qna-write article table td, body.qna-rewrite article table th,
+		body.qna-rewrite article table td {
+		padding: 12px 16px;
+		font-size: 13px;
+	}
+	body.qna-write article table th, body.qna-rewrite article table th {
+		display: block;
+		width: 100%;
+		text-align: left;
+		border-bottom: none;
+		padding-bottom: 8px;
+	}
+	body.qna-write article table td, body.qna-rewrite article table td {
+		display: block;
+		width: 100%;
+		padding-top: 0;
+	}
+	body.qna-write article table tr:nth-child(3) td, body.qna-rewrite article table tr:nth-child(3) td
+		{
+		padding: 16px;
+	}
+	body.qna-write .commentBox, body.qna-rewrite .commentBox {
+		min-height: 200px;
+	}
+	body.qna-write article table input[type="submit"], body.qna-write article table input[type="reset"],
+		body.qna-write article table input[type="button"], body.qna-rewrite article table input[type="submit"],
+		body.qna-rewrite article table input[type="reset"], body.qna-rewrite article table input[type="button"]
+		{
+		padding: 8px 20px;
+		font-size: 13px;
+		margin: 5px 3px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.qna-write main, body.qna-rewrite main {
+		padding: 40px 20px 60px;
+	}
+	body.qna-write h2, body.qna-rewrite h2 {
+		font-size: 20px;
+	}
+	body.qna-write article table th, body.qna-write article table td, body.qna-rewrite article table th,
+		body.qna-rewrite article table td {
+		padding: 10px 12px;
+		font-size: 12px;
+	}
+	body.qna-write .titletext, body.qna-write .commentBox, body.qna-rewrite .titletext,
+		body.qna-rewrite .commentBox {
+		font-size: 13px;
+	}
+	body.qna-write .commentBox, body.qna-rewrite .commentBox {
+		min-height: 180px;
+	}
+	body.qna-write article table input[type="submit"], body.qna-write article table input[type="reset"],
+		body.qna-write article table input[type="button"], body.qna-rewrite article table input[type="submit"],
+		body.qna-rewrite article table input[type="reset"], body.qna-rewrite article table input[type="button"]
+		{
+		padding: 8px 16px;
+		font-size: 12px;
+		display: block;
+		width: 100%;
+		margin: 5px 0;
+	}
+}

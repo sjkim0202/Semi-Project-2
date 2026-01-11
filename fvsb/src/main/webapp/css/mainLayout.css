@@ -1,0 +1,694 @@
+@charset "UTF-8";
+
+/* ========== 전체 레이아웃 ========== */
+body {
+	background: #ffffff;
+	color: #1a1a1a;
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
+	overflow-x: hidden;
+}
+
+/* ========== 헤더 ========== */
+header {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	border-bottom: none;
+}
+
+/* 헤더 상단 (로고 + 네비게이션) */
+header .header-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 40px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+/* 로고 영역 */
+header .logo {
+	display: flex;
+	align-items: center;
+}
+
+header .logo img {
+	height: 40px;
+	width: auto;
+	display: block;
+}
+
+/* 네비게이션 영역 */
+header .nav-links {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+header .nav-links a {
+	text-decoration: none;
+	color: #666666;
+	font-weight: 500;
+	font-size: 15px;
+	transition: color 0.2s;
+	white-space: nowrap;
+}
+
+header .nav-links a:hover {
+	color: #ff2f6e;
+}
+
+/* 사용자 정보 */
+header .nav-links .user-info {
+	color: #1a1a1a;
+	font-weight: 500;
+	font-size: 15px;
+	cursor: default;
+}
+
+/* 알림 아이콘 */
+header .nav-links .notification-icon {
+	position: relative;
+	display: inline-block;
+}
+
+header .nav-links .notification-icon img {
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	transition: opacity 0.2s;
+}
+
+header .nav-links .notification-icon:hover img {
+	opacity: 0.7;
+}
+
+header .nav-links .notification-badge {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	font-size: 11px;
+	padding: 1px 4px;
+	border-radius: 10px;
+	background-color: #ff2f6e;
+	color: white;
+	font-weight: 600;
+	min-width: 16px;
+	text-align: center;
+}
+
+/* 하트 아이콘 (좋아요 목록) */
+header .nav-links a[onclick*="likeList"] {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header .nav-links a[onclick*="likeList"] img {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	transition: opacity 0.2s;
+}
+
+header .nav-links a[onclick*="likeList"]:hover img {
+	opacity: 0.7;
+}
+
+/* ========== 서브 메뉴 (헤더 내부로 이동) ========== */
+header .main-submenu {
+	padding: 0 40px;
+	margin: 0;
+	background: #ffffff;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+header .main-submenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 40px;
+}
+
+header .main-submenu li {
+	display: inline-block;
+}
+
+header .main-submenu a {
+	display: block;
+	padding: 20px 0;
+	text-decoration: none;
+	color: #666666;
+	font-size: 15px;
+	font-weight: 500;
+	transition: color 0.2s;
+	position: relative;
+}
+
+header .main-submenu a:hover {
+	color: #1a1a1a;
+}
+
+header .main-submenu a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background: #ff2f6e;
+	transition: width 0.2s;
+}
+
+header .main-submenu a:hover::after {
+	width: 100%;
+}
+
+/* 구분선 제거 */
+header hr {
+	display: none;
+}
+
+/* ========== 스크롤바 ========== */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #d9d9d9;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #bfbfbf;
+}
+
+/* ========================================================
+   메인 페이지 전용 스타일
+   (body.main-page 클래스가 있을 때만 적용)
+   ======================================================== */
+body.main-page main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+body.main-page section:first-of-type {
+	margin-bottom: 0;
+}
+
+/* ========== 메인 이미지 ========== */
+body.main-page #mainImg {
+	width: 100%;
+	height: 260px;
+	margin-bottom: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+body.main-page #mainImg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* ========== 서브 메뉴 바 (메인 페이지용) ========== */
+body.main-page #mainSubmenu {
+	padding: 0 40px;
+	margin: 0;
+	background: #ffffff;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+body.main-page #mainSubmenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 40px;
+}
+
+body.main-page #mainSubmenu li {
+	display: inline-block;
+}
+
+body.main-page #mainSubmenu a {
+	display: block;
+	padding: 20px 0;
+	text-decoration: none;
+	color: #666666;
+	font-size: 15px;
+	font-weight: 500;
+	transition: color 0.2s;
+	position: relative;
+}
+
+body.main-page #mainSubmenu a:hover {
+	color: #1a1a1a;
+}
+
+body.main-page #mainSubmenu a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background: #ff2f6e;
+	transition: width 0.2s;
+}
+
+body.main-page #mainSubmenu a:hover::after {
+	width: 100%;
+}
+
+/* ========== 달력 섹션 ========== */
+body.main-page #calendar-section {
+	padding: 60px 40px 40px;
+	background: #fafafa;
+}
+
+body.main-page #calendar-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+	margin-bottom: 32px;
+	padding: 0;
+}
+
+body.main-page #calendar-header button {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #d9d9d9;
+	background: #ffffff;
+	color: #333333;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.2s;
+	border-radius: 50%;
+}
+
+body.main-page #calendar-header button:hover {
+	border-color: #ff2f6e;
+	color: #ff2f6e;
+}
+
+body.main-page #label-month {
+	font-size: 20px;
+	font-weight: 600;
+	color: #1a1a1a;
+	min-width: 160px;
+	text-align: center;
+}
+
+/* ========== 달력 테이블 ========== */
+body.main-page #calendar-section table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+body.main-page #calendar-section th {
+	background: #ffffff;
+	color: #999999;
+	padding: 18px 8px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 13px;
+	border-bottom: 2px solid #f0f0f0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+body.main-page #calendar-section td {
+	border: 1px solid #f0f0f0;
+	padding: 10px;
+	text-align: left;
+	vertical-align: top;
+	height: 80px;
+	font-size: 14px;
+	background: #ffffff;
+	transition: all 0.2s;
+	cursor: pointer;
+	position: relative;
+}
+
+body.main-page #calendar-section td:hover {
+	background: #fff8fa;
+	border-color: #ffe0ea;
+}
+
+/* 날짜 숫자 */
+body.main-page #calendar-section .day-number {
+	font-weight: 500;
+	color: #333333;
+	font-size: 15px;
+	margin-bottom: 6px;
+}
+
+/* 일요일 */
+body.main-page #calendar-section td:first-child .day-number {
+	color: #ff6b6b;
+}
+
+/* 토요일 */
+body.main-page #calendar-section td:last-child .day-number {
+	color: #4285f4;
+}
+
+/* 선택된 날짜 */
+body.main-page #calendar-section td.selected {
+	background: #ff2f6e;
+	border-color: #ff2f6e;
+}
+
+body.main-page #calendar-section td.selected .day-number {
+	color: #ffffff;
+	font-weight: 600;
+}
+
+body.main-page #calendar-section td.selected .movie-list li {
+	color: #ffffff;
+}
+
+/* 빈 셀 */
+body.main-page #calendar-section td:empty {
+	background: #fafafa;
+	cursor: default;
+	border-color: #f5f5f5;
+}
+
+body.main-page #calendar-section td:empty:hover {
+	background: #fafafa;
+	border-color: #f5f5f5;
+}
+
+/* ========== 영화 목록 ========== */
+body.main-page .movie-list {
+	list-style: none;
+	margin: 4px 0 0;
+	padding-left: 0;
+	font-size: 11px;
+	line-height: 1.3;
+	max-height: 60px;
+	overflow: hidden;
+}
+
+body.main-page .movie-list li {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #666666;
+}
+
+body.main-page .movie-list li.more {
+	font-weight: 500;
+	opacity: 0.7;
+}
+
+/* ========== 예매 사이트 버튼 섹션 ========== */
+body.main-page #reserve-section {
+	padding: 20px 40px 60px;
+	background: #fafafa;
+}
+
+body.main-page #reserve-section article {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+body.main-page #reserve-section button {
+	flex: 1;
+	max-width: 250px;
+	padding: 18px 32px;
+	background: #ffffff;
+	color: #333333;
+	border: 2px solid #e6e6e6;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body.main-page #reserve-section button:hover {
+	border-color: #ff2f6e;
+	color: #ff2f6e;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(255, 47, 110, 0.15);
+}
+
+/* ========== 반응형 (공통) ========== */
+@media ( max-width : 1024px) {
+	header .header-top, header .main-submenu {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+@media ( max-width : 768px) {
+	header .header-top, header .main-submenu {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	header .header-top {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+	header .logo img {
+		height: 32px;
+	}
+	header .nav-links {
+		gap: 20px;
+	}
+	header .nav-links a {
+		font-size: 14px;
+	}
+	header .main-submenu ul {
+		gap: 28px;
+	}
+}
+
+@media ( max-width : 480px) {
+	header .logo img {
+		height: 28px;
+	}
+	header .nav-links {
+		gap: 16px;
+	}
+	header .nav-links a, header .nav-links .user-info {
+		font-size: 13px;
+	}
+	header .nav-links .notification-icon img, header .nav-links a[onclick*="likeList"] img
+		{
+		width: 18px;
+		height: 18px;
+	}
+	header .main-submenu ul {
+		gap: 24px;
+	}
+	header .main-submenu a {
+		font-size: 14px;
+		padding: 16px 0;
+	}
+}
+
+/* ========== 반응형 (메인 페이지 전용) ========== */
+@media ( max-width : 1024px) {
+	body.main-page #mainImg {
+		height: 260px;
+	}
+	body.main-page #mainSubmenu, body.main-page #calendar-section {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.main-page #mainImg {
+		height: 260px;
+	}
+	body.main-page #mainSubmenu, body.main-page #calendar-section {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	body.main-page #mainSubmenu ul {
+		gap: 28px;
+	}
+	body.main-page #calendar-section {
+		padding-top: 40px;
+		padding-bottom: 30px;
+	}
+	body.main-page #calendar-section td {
+		height: 70px;
+		padding: 8px;
+	}
+	body.main-page #calendar-section .day-number {
+		font-size: 14px;
+	}
+	body.main-page .movie-list {
+		font-size: 10px;
+	}
+	body.main-page #reserve-section {
+		padding: 15px 20px 50px;
+	}
+	body.main-page #reserve-section article {
+		gap: 12px;
+	}
+	body.main-page #reserve-section button {
+		padding: 14px 24px;
+		font-size: 14px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.main-page #mainImg {
+		height: 240px;
+	}
+	body.main-page #mainSubmenu ul {
+		gap: 24px;
+	}
+	body.main-page #mainSubmenu a {
+		font-size: 14px;
+		padding: 16px 0;
+	}
+	body.main-page #calendar-header button {
+		width: 36px;
+		height: 36px;
+		font-size: 14px;
+	}
+	body.main-page #label-month {
+		font-size: 18px;
+		min-width: 140px;
+	}
+	body.main-page #calendar-section td {
+		height: 65px;
+		padding: 8px 6px;
+	}
+	body.main-page #calendar-section .day-number {
+		font-size: 13px;
+	}
+	body.main-page #calendar-section th {
+		font-size: 12px;
+		padding: 14px 6px;
+	}
+	body.main-page .movie-list {
+		font-size: 9px;
+		max-height: 35px;
+	}
+	body.main-page #reserve-section {
+		padding: 15px 15px 50px;
+	}
+	body.main-page #reserve-section article {
+		flex-direction: column;
+		gap: 12px;
+	}
+	body.main-page #reserve-section button {
+		max-width: 100%;
+		padding: 14px 24px;
+		font-size: 15px;
+	}
+}
+
+/* ========== 푸터 ========== */
+footer {
+	width: 100%;
+	background: #1a1a1a;
+	color: #999999;
+	padding: 40px 40px 32px;
+	margin-top: 60px;
+	border-top: 1px solid #e6e6e6;
+}
+
+footer .footer-section {
+	max-width: 1400px;
+	margin: 0 auto 24px;
+}
+
+footer .footer-section.info p {
+	margin: 0 0 12px;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+footer .footer-section.info a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s;
+}
+
+footer .footer-section.info a:hover {
+	color: #ff2f6e;
+}
+
+footer .footer-bottom {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding-top: 24px;
+	border-top: 1px solid #333333;
+}
+
+footer .footer-bottom p {
+	margin: 0 0 8px;
+	font-size: 13px;
+	color: #666666;
+	line-height: 1.5;
+}
+
+footer .footer-bottom p:last-child {
+	margin-bottom: 0;
+}
+
+/* 푸터 반응형 */
+@media ( max-width : 1024px) {
+	footer {
+		padding: 36px 30px 28px;
+	}
+}
+
+@media ( max-width : 768px) {
+	footer {
+		padding: 32px 20px 24px;
+		margin-top: 40px;
+	}
+	footer .footer-section.info p {
+		font-size: 13px;
+	}
+	footer .footer-bottom p {
+		font-size: 12px;
+	}
+}
+
+@media ( max-width : 480px) {
+	footer {
+		padding: 28px 20px 20px;
+	}
+	footer .footer-section.info p {
+		font-size: 12px;
+	}
+	footer .footer-bottom {
+		padding-top: 20px;
+	}
+	footer .footer-bottom p {
+		font-size: 11px;
+	}
+}

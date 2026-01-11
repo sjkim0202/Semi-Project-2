@@ -1,0 +1,994 @@
+@charset "UTF-8";
+
+/* ========================================================
+   배우 목록 페이지 전용 스타일
+   (body.actor-form 클래스가 있을 때만 적용)
+   ======================================================== */
+body.actor-form main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px;
+}
+
+body.actor-form main section h2 {
+	font-size: 24px;
+	font-weight: 600;
+	color: #1a1a1a;
+	text-align: center;
+	margin: 0 0 50px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+body.actor-form main article {
+	width: 100%;
+}
+
+body.actor-form main article table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+/* ========== 섹션 제목 (국내/해외 배우) ========== */
+body.actor-form main article table tr td[colspan="5"] {
+	padding: 32px 0 20px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #1a1a1a;
+	text-align: center;
+}
+
+body.actor-form main article table tr:first-child td[colspan="5"] {
+	padding-top: 0;
+}
+
+/* ========== 배우 카드 영역 ========== */
+body.actor-form main article table tr td {
+	padding: 24px 16px;
+	vertical-align: middle;
+}
+
+/* ========== 화살표 버튼 영역 ========== */
+body.actor-form main article table tr td[width="80"] {
+	text-align: center;
+	padding: 24px 8px;
+}
+
+body.actor-form main article table tr td[width="80"] a {
+	display: inline-block;
+	transition: opacity 0.2s;
+}
+
+body.actor-form main article table tr td[width="80"] a:hover {
+	opacity: 0.7;
+}
+
+body.actor-form main article table tr td[width="80"] a img {
+	vertical-align: middle;
+}
+
+/* ========== 배우 카드 스타일 ========== */
+body.actor-form main article table tr td[align="center"][style*="padding: 20px"]
+	{
+	padding: 24px 16px !important;
+	text-align: center;
+}
+
+body.actor-form main article table tr td a {
+	text-decoration: none;
+	display: inline-block;
+	transition: opacity 0.2s;
+}
+
+body.actor-form main article table tr td a:hover {
+	opacity: 0.85;
+}
+
+body.actor-form main article table tr td[align="center"][style*="padding: 20px"] a img
+	{
+	width: 160px;
+	height: 240px;
+	object-fit: cover;
+	display: block;
+	border: 1px solid #e6e6e6;
+}
+
+/* 위쪽 배우 리스트 좌우 화살표 */
+body.actor-form main article table tr td[width="80"] a img {
+	width: 24px;
+	height: auto;
+}
+
+/* 아래쪽 페이지 그룹 이동 화살표 */
+body.actor-form main article table tr td[colspan="10"] a img {
+	width: 20px;
+	height: auto;
+}
+
+/* ========== 배우 정보 텍스트 ========== */
+body.actor-form main article table tr td div {
+	margin-top: 8px;
+	font-size: 14px;
+	color: #666666;
+	line-height: 1.5;
+}
+
+body.actor-form main article table tr td div:first-of-type {
+	font-weight: 500;
+	font-size: 15px;
+	color: #1a1a1a;
+	margin-top: 12px;
+}
+
+/* ========== 빈 데이터 메시지 ========== */
+body.actor-form main article table tr td[colspan="3"] {
+	padding: 50px 20px;
+	text-align: center;
+	color: #999999;
+	font-size: 14px;
+}
+
+/* ========== 페이지 네비게이션 ========== */
+body.actor-form main article table tr td[colspan="10"] {
+	text-align: center;
+	padding: 24px 0 0;
+}
+
+body.actor-form main article table tr td[colspan="10"] a {
+	display: inline-block;
+	margin: 0 6px;
+	transition: opacity 0.2s;
+}
+
+body.actor-form main article table tr td[colspan="10"] a:hover {
+	opacity: 0.7;
+}
+
+body.actor-form main article table tr td[colspan="10"] a img {
+	vertical-align: middle;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.actor-form main {
+		padding: 50px 30px;
+	}
+	body.actor-form main section h2 {
+		font-size: 22px;
+		margin-bottom: 40px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.actor-form main {
+		padding: 40px 20px;
+	}
+	body.actor-form main section h2 {
+		font-size: 20px;
+		margin-bottom: 32px;
+		padding-bottom: 12px;
+	}
+	body.actor-form main article table tr td[colspan="5"] {
+		font-size: 16px;
+		padding: 24px 0 16px;
+	}
+	body.actor-form main article table tr td {
+		padding: 20px 12px;
+	}
+	body.actor-form main article table tr td a img {
+		width: 140px;
+		height: 210px;
+	}
+	body.actor-form main article table tr td div:first-of-type {
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	body.actor-form main article table tr td div {
+		font-size: 13px;
+	}
+	body.actor-form main article table tr td[width="80"] a img {
+		width: 20px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.actor-form main {
+		padding: 32px 15px;
+	}
+	body.actor-form main section h2 {
+		font-size: 18px;
+		margin-bottom: 28px;
+	}
+	body.actor-form main article table tr td[colspan="5"] {
+		font-size: 15px;
+		padding: 20px 0 12px;
+	}
+	body.actor-form main article table tr td {
+		padding: 16px 8px;
+	}
+	body.actor-form main article table tr td a img {
+		width: 110px;
+		height: 165px;
+	}
+	body.actor-form main article table tr td div:first-of-type {
+		font-size: 13px;
+		margin-top: 8px;
+	}
+	body.actor-form main article table tr td div {
+		font-size: 12px;
+		margin-top: 6px;
+	}
+	body.actor-form main article table tr td[width="80"] {
+		padding: 16px 5px;
+	}
+	body.actor-form main article table tr td[width="80"] a img {
+		width: 18px;
+	}
+	body.actor-form main article table tr td[colspan="10"] {
+		padding: 20px 0 0;
+	}
+	body.actor-form main article table tr td[colspan="10"] a {
+		margin: 0 4px;
+	}
+	body.actor-form main article table tr td[colspan="10"] a img {
+		width: 16px;
+	}
+}
+
+/* ========================================================
+   배우 출연 영화 목록 페이지 전용 스타일
+   (body.actor-movie-list 클래스가 있을 때만 적용)
+   ======================================================== */
+body.actor-movie-list main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px;
+}
+
+body.actor-movie-list main section h2 {
+	font-size: 24px;
+	font-weight: 600;
+	color: #1a1a1a;
+	text-align: center;
+	margin: 0 0 50px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+body.actor-movie-list main article {
+	width: 100%;
+}
+
+/* ========== 빈 데이터 메시지 ========== */
+body.actor-movie-list main article>p {
+	text-align: center;
+	color: #999999;
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 40px 0 12px;
+}
+
+body.actor-movie-list main article>p a {
+	color: #666666;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s;
+}
+
+body.actor-movie-list main article>p a:hover {
+	color: #ff2f6e;
+}
+
+/* ========== 영화 목록 테이블 ========== */
+body.actor-movie-list main article table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+body.actor-movie-list main article table tr td {
+	text-align: center;
+	padding: 20px;
+	vertical-align: top;
+}
+
+body.actor-movie-list main article table tr td a {
+	text-decoration: none;
+	display: inline-block;
+	transition: opacity 0.2s;
+}
+
+body.actor-movie-list main article table tr td a:hover {
+	opacity: 0.85;
+}
+
+body.actor-movie-list main article table tr td a img {
+	width: 180px;
+	height: 270px;
+	object-fit: cover;
+	display: block;
+	border: 1px solid #e6e6e6;
+	margin: 0 auto;
+}
+
+/* ========== 영화 정보 텍스트 ========== */
+body.actor-movie-list main article table tr td div {
+	margin-top: 8px;
+	font-size: 14px;
+	color: #666666;
+	line-height: 1.5;
+}
+
+body.actor-movie-list main article table tr td div:first-of-type {
+	font-weight: 500;
+	font-size: 15px;
+	color: #1a1a1a;
+	margin-top: 12px;
+}
+
+/* ========== 돌아가기 링크 ========== */
+body.actor-movie-list main article>p[style*="text-align: center"] {
+	text-align: center;
+	margin-top: 40px;
+}
+
+body.actor-movie-list main article>p[style*="text-align: center"] a {
+	color: #666666;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+	transition: color 0.2s;
+}
+
+body.actor-movie-list main article>p[style*="text-align: center"] a:hover
+	{
+	color: #ff2f6e;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.actor-movie-list main {
+		padding: 50px 30px;
+	}
+	body.actor-movie-list main section h2 {
+		font-size: 22px;
+		margin-bottom: 40px;
+	}
+	body.actor-movie-list main article table tr td a img {
+		width: 160px;
+		height: 240px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.actor-movie-list main {
+		padding: 40px 20px;
+	}
+	body.actor-movie-list main section h2 {
+		font-size: 20px;
+		margin-bottom: 32px;
+		padding-bottom: 12px;
+	}
+	body.actor-movie-list main article table tr td {
+		padding: 16px;
+	}
+	body.actor-movie-list main article table tr td a img {
+		width: 140px;
+		height: 210px;
+	}
+	body.actor-movie-list main article table tr td div:first-of-type {
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	body.actor-movie-list main article table tr td div {
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.actor-movie-list main {
+		padding: 32px 15px;
+	}
+	body.actor-movie-list main section h2 {
+		font-size: 18px;
+		margin-bottom: 28px;
+	}
+	body.actor-movie-list main article table tr td {
+		display: block;
+		padding: 20px 0;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.actor-movie-list main article table tr td:last-child {
+		border-bottom: none;
+	}
+	body.actor-movie-list main article table tr td a img {
+		width: 150px;
+		height: 225px;
+	}
+	body.actor-movie-list main article table tr td div:first-of-type {
+		font-size: 13px;
+		margin-top: 8px;
+	}
+	body.actor-movie-list main article table tr td div {
+		font-size: 12px;
+		margin-top: 6px;
+	}
+	body.actor-movie-list main article>p[style*="text-align: center"] {
+		margin-top: 32px;
+	}
+}
+
+/* ========================================================
+   배우 등록/수정 페이지 전용 스타일
+   (body.actor-insert 클래스가 있을 때만 적용)
+   ======================================================== */
+body.actor-insert main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+}
+
+body.actor-insert main section {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+body.actor-insert main h2 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 40px;
+	letter-spacing: -0.5px;
+}
+
+/* ========== 회원가입 폼 ========== */
+body.actor-insert main article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.actor-insert main article form {
+	padding: 0;
+}
+
+body.actor-insert main article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body.actor-insert main article table tr {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.actor-insert main article table th {
+	padding: 18px 24px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	background: #fafafa;
+	width: 20%;
+	vertical-align: middle;
+}
+
+body.actor-insert main article table td {
+	padding: 18px 24px;
+	font-size: 14px;
+	color: #333333;
+}
+
+/* ========== 입력 필드 ========== */
+body.actor-insert main article table input[type="text"] {
+	width: 250px;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+}
+
+body.actor-insert main article table input[type="text"]:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+body.actor-insert main article table select {
+	width: 250px;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+	cursor: pointer;
+	background: #ffffff;
+}
+
+body.actor-insert main article table select:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* ========== 파일 입력 ========== */
+body.actor-insert main article table input[type="file"] {
+	padding: 8px 0;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+/* ========== 버튼 영역 ========== */
+body.actor-insert main article table tr:last-child {
+	border-bottom: none;
+}
+
+body.actor-insert main article table tr:last-child td {
+	text-align: center;
+	padding: 32px 24px;
+	background: #fafafa;
+	border-top: 2px solid #f0f0f0;
+}
+
+body.actor-insert main article table input[type="submit"] {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.actor-insert main article table input[type="submit"]:hover {
+	background: #e02859;
+}
+
+body.actor-insert main article table input[type="reset"] {
+	background: #f0f0f0;
+	color: #666666;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.actor-insert main article table input[type="reset"]:hover {
+	background: #e6e6e6;
+}
+
+/* ========================================================
+   팝업 전용 스타일
+   (body.actor-insert-popup 클래스가 있을 때만 적용)
+   ======================================================== */
+body.actor-insert-popup {
+	background: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+
+body.actor-insert-popup h2 {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin: 0 0 32px;
+	padding: 24px 24px 16px;
+	border-bottom: 1px solid #f0f0f0;
+	letter-spacing: -0.5px;
+}
+
+body.actor-insert-popup form {
+	width: 100%;
+	margin: 0;
+	padding: 24px;
+	background: #ffffff;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+body.actor-insert-popup form table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body.actor-insert-popup form table tr {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.actor-insert-popup form table th {
+	padding: 16px 20px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	background: #fafafa;
+	width: 25%;
+	vertical-align: middle;
+}
+
+body.actor-insert-popup form table td {
+	padding: 16px 20px;
+	font-size: 14px;
+	color: #333333;
+}
+
+/* ========== 입력 필드 ========== */
+body.actor-insert-popup form table input[type="text"] {
+	width: 200px;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+}
+
+body.actor-insert-popup form table input[type="text"]:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* ========== select 박스 ========== */
+body.actor-insert-popup form table select {
+	width: 200px;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+	cursor: pointer;
+	background: #ffffff;
+}
+
+body.actor-insert-popup form table select:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* ========== 파일 입력 ========== */
+body.actor-insert-popup form table input[type="file"] {
+	padding: 8px 0;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+/* ========== 버튼 영역 ========== */
+body.actor-insert-popup form table tr:last-child {
+	border-bottom: none;
+}
+
+body.actor-insert-popup form table tr:last-child td {
+	text-align: center;
+	padding: 28px 20px;
+	background: #fafafa;
+	border-top: 2px solid #f0f0f0;
+}
+
+body.actor-insert-popup form table input[type="submit"] {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 28px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 4px;
+}
+
+body.actor-insert-popup form table input[type="submit"]:hover {
+	background: #e02859;
+}
+
+body.actor-insert-popup form table input[type="reset"] {
+	background: #f0f0f0;
+	color: #666666;
+	padding: 10px 28px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 4px;
+}
+
+body.actor-insert-popup form table input[type="reset"]:hover {
+	background: #e6e6e6;
+}
+
+body.actor-insert-popup form table input[type="button"] {
+	background: #f0f0f0;
+	color: #666666;
+	padding: 10px 28px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 4px;
+}
+
+body.actor-insert-popup form table input[type="button"]:hover {
+	background: #e6e6e6;
+}
+
+/* ========== 팝업 반응형 ========== */
+@media ( max-width : 480px) {
+	body.actor-insert-popup h2 {
+		font-size: 20px;
+		padding: 20px 16px 12px;
+		margin-bottom: 24px;
+	}
+	body.actor-insert-popup form {
+		padding: 20px 16px;
+	}
+	body.actor-insert-popup form table th, body.actor-insert-popup form table td
+		{
+		display: block;
+		width: 100%;
+		padding: 12px 16px;
+	}
+	body.actor-insert-popup form table th {
+		padding-bottom: 8px;
+		border-bottom: none;
+	}
+	body.actor-insert-popup form table td {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.actor-insert-popup form table tr {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.actor-insert-popup form table input[type="text"], body.actor-insert-popup form table select
+		{
+		width: 100%;
+	}
+	body.actor-insert-popup form table input[type="submit"], body.actor-insert-popup form table input[type="reset"],
+		body.actor-insert-popup form table input[type="button"] {
+		width: 30%;
+		padding: 10px 16px;
+		font-size: 13px;
+		margin: 4px 2px;
+	}
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.actor-insert main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.actor-insert main {
+		padding: 40px 20px 60px;
+	}
+	body.actor-insert main section {
+		max-width: 100%;
+	}
+	body.actor-insert main h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	body.actor-insert main article table th {
+		width: 30%;
+		padding: 14px 16px;
+		font-size: 13px;
+	}
+	body.actor-insert main article table td {
+		padding: 14px 16px;
+		font-size: 13px;
+	}
+	body.actor-insert main article table input[type="text"], body.actor-insert main article table select
+		{
+		width: 100%;
+		max-width: 300px;
+	}
+	body.actor-insert main article table input[type="submit"], body.actor-insert main article table input[type="reset"]
+		{
+		padding: 10px 24px;
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.actor-insert main {
+		padding: 40px 15px 60px;
+	}
+	body.actor-insert main h2 {
+		font-size: 20px;
+	}
+	body.actor-insert main article table th, body.actor-insert main article table td
+		{
+		display: block;
+		width: 100%;
+		padding: 12px 16px;
+	}
+	body.actor-insert main article table th {
+		padding-bottom: 8px;
+		border-bottom: none;
+	}
+	body.actor-insert main article table td {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.actor-insert main article table tr {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.actor-insert main article table input[type="text"], body.actor-insert main article table select
+		{
+		width: 100%;
+	}
+	body.actor-insert main article table input[type="submit"], body.actor-insert main article table input[type="reset"]
+		{
+		width: 48%;
+		padding: 10px 16px;
+		font-size: 13px;
+	}
+}
+
+/* ========================================================
+   배우 출연 선택 페이지 전용 스타일
+   (body.moive-actor-select 클래스가 있을 때만 적용)
+   ======================================================== */
+body.moive-actor-select {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+	background: #ffffff;
+}
+
+body.moive-actor-select h2 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 40px;
+	letter-spacing: -0.5px;
+}
+
+body.moive-actor-select form {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto 30px;
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	padding: 40px;
+}
+
+body.moive-actor-select form div {
+	padding: 20px 0;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.moive-actor-select input[type="checkbox"] {
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+body.moive-actor-select label {
+	font-size: 15px;
+	color: #333333;
+	font-weight: 500;
+	cursor: pointer;
+	vertical-align: middle;
+	line-height: 1.6;
+}
+
+body.moive-actor-select input[type="submit"] {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px 10px 0;
+	display: inline-block;
+}
+
+body.moive-actor-select input[type="submit"]:hover {
+	background: #e02859;
+}
+
+body.moive-actor-select input[type="button"] {
+	background: #f0f0f0;
+	color: #666666;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px 10px 0;
+	display: inline-block;
+}
+
+body.moive-actor-select input[type="button"]:hover {
+	background: #e6e6e6;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.moive-actor-select {
+		padding: 60px 30px 80px;
+	}
+	body.moive-actor-select form {
+		padding: 32px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.moive-actor-select {
+		padding: 40px 20px 60px;
+	}
+	body.moive-actor-select h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	body.moive-actor-select form {
+		padding: 24px;
+		max-width: 100%;
+	}
+	body.moive-actor-select form div {
+		padding: 16px 0;
+	}
+	body.moive-actor-select label {
+		font-size: 14px;
+		display: block;
+		margin: 8px 0;
+	}
+	body.moive-actor-select input[type="submit"], body.moive-actor-select input[type="button"]
+		{
+		padding: 10px 24px;
+		font-size: 13px;
+		margin: 5px 3px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.moive-actor-select {
+		padding: 40px 15px 60px;
+	}
+	body.moive-actor-select h2 {
+		font-size: 20px;
+	}
+	body.moive-actor-select form {
+		padding: 20px;
+	}
+	body.moive-actor-select form div {
+		padding: 12px 0;
+	}
+	body.moive-actor-select label {
+		font-size: 13px;
+	}
+	body.moive-actor-select input[type="submit"], body.moive-actor-select input[type="button"]
+		{
+		width: 100%;
+		padding: 12px 16px;
+		font-size: 13px;
+		margin: 5px 0;
+	}
+}

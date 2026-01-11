@@ -1,0 +1,606 @@
+@charset "UTF-8";
+/* ========== 관리자 페이지 레이아웃 ========== */
+main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+}
+
+section {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h2 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 40px;
+	letter-spacing: -0.5px;
+}
+
+/* ========== 글쓰기 버튼 (우측 상단) ========== */
+.table-header {
+	width: 100%;
+	margin: 0 0 16px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.write-btn {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 24px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.write-btn:hover {
+	background: #e02859;
+}
+
+/* ========== 관리자 테이블 ========== */
+article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+	table-layout: fixed; /* 모든 테이블에 고정 레이아웃 적용 */
+}
+
+/* 테이블 헤더 */
+article table thead {
+	background: #fafafa;
+	border-bottom: 2px solid #f0f0f0;
+}
+
+article table thead th {
+	padding: 16px 12px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	letter-spacing: 0.3px;
+	width: 14.285%; /* 7개 열이므로 100% / 7 */
+}
+
+/* 테이블 바디 */
+article table tbody tr {
+	border-bottom: 1px solid #f0f0f0;
+	transition: background 0.2s;
+}
+
+article table tbody tr:hover {
+	background: #fff8fa;
+}
+
+article table tbody td {
+	padding: 14px 12px;
+	text-align: center;
+	font-size: 14px;
+	color: #333333;
+}
+
+/* 제목 열 좌측 정렬 */
+article table tbody td:nth-child(2) {
+	text-align: left;
+}
+
+/* 등록된 글 없음 */
+article table tbody tr td[colspan] {
+	padding: 60px 12px;
+	text-align: center;
+	color: #999999;
+	font-size: 15px;
+}
+
+/* ========== 테이블 내 버튼 ========== */
+article table button {
+	background: #f0f0f0;
+	color: #666666;
+	padding: 6px 16px;
+	border: none;
+	border-radius: 4px;
+	font-weight: 500;
+	font-size: 13px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+article table button:hover {
+	background: #ff2f6e;
+	color: #ffffff;
+}
+
+/* ========== 구분선 ========== */
+hr {
+	border: none;
+	border-top: 1px solid #f0f0f0;
+	margin: 30px 0;
+}
+
+/* ========== 페이지네이션 ========== */
+.pagination {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.pagination a, .pagination span {
+	display: inline-block;
+	padding: 8px 12px;
+	margin: 0 3px;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: all 0.2s;
+}
+
+.page_link {
+	text-decoration: none;
+	color: #666666;
+}
+
+.page_link:hover {
+	background: #fff8fa;
+	color: #ff2f6e;
+}
+
+.current_page {
+	background: #ff2f6e;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+/* ========== 관리자 메뉴 버튼 영역 ========== */
+.admin-menu-buttons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 20px;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.admin-menu-buttons input[type="button"] {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.admin-menu-buttons input[type="button"]:hover {
+	background: #e02859;
+}
+
+/* ========== 달력 상단 헤더 ========== */
+#calendar-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+	margin-bottom: 32px;
+	padding: 0;
+}
+
+#calendar-header button {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #d9d9d9;
+	background: #ffffff;
+	color: #333333;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.2s;
+	border-radius: 50%;
+}
+
+#calendar-header button:hover {
+	border-color: #ff2f6e;
+	color: #ff2f6e;
+}
+
+#label-month {
+	font-size: 20px;
+	font-weight: 600;
+	color: #1a1a1a;
+	min-width: 160px;
+	text-align: center;
+}
+
+/* ========== 달력 테이블 스타일 ========== */
+#calendar-body td {
+	border: 1px solid #f0f0f0;
+	padding: 10px;
+	text-align: left;
+	vertical-align: top;
+	width: 14.285%; /* 7개 열이므로 100% / 7 */
+	height: 80px; /* 고정 높이 */
+	max-height: 80px; /* 최대 높이 제한 */
+	min-width: 0; /* 최소 너비 제한 제거 */
+	font-size: 14px;
+	background: #ffffff;
+	transition: all 0.2s;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden; /* 넘치는 내용 숨김 */
+	word-wrap: break-word; /* 긴 단어 강제 줄바꿈 */
+	word-break: break-all; /* 내용이 셀을 넘어가지 않도록 */
+}
+
+#calendar-body td:hover {
+	background: #fff8fa;
+	border-color: #ffe0ea;
+}
+
+/* 날짜 숫자 */
+#calendar-body td div:first-child {
+	font-weight: 500;
+	color: #333333;
+	font-size: 15px;
+	margin-bottom: 6px;
+	width: 100%; /* 부모 셀 너비에 맞춤 */
+	box-sizing: border-box;
+}
+
+/* 선택된 날짜 */
+#calendar-body td.selected {
+	background: #ff2f6e !important;
+	border-color: #ff2f6e;
+}
+
+#calendar-body td.selected div:first-child {
+	color: #ffffff;
+	font-weight: 600;
+}
+
+#calendar-body td.selected .memo-preview {
+	color: #ffffff;
+}
+
+/* 빈 셀 */
+#calendar-body td:empty {
+	background: #fafafa;
+	cursor: default;
+	border-color: #f5f5f5;
+}
+
+#calendar-body td:empty:hover {
+	background: #fafafa;
+	border-color: #f5f5f5;
+}
+
+/* 메모 미리보기 */
+.memo-preview {
+	margin-top: 6px;
+	padding: 4px 6px;
+	background: transparent;
+	border-radius: 4px;
+	font-size: 11px;
+	color: #666666;
+	line-height: 1.3;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%; /* 셀 너비를 넘지 않도록 */
+}
+
+/* ========== 하단 버튼 영역 ========== */
+article table tfoot td {
+	background: #fafafa;
+	border: 1px solid #f0f0f0;
+	padding: 16px;
+	text-align: center;
+}
+
+article table tfoot input[type="button"] {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 4px;
+}
+
+article table tfoot input[type="button"]:hover {
+	background: #e02859;
+}
+
+/* ========== 메모(일정) 영역 ========== */
+#memo-area {
+	margin-top: 20px;
+	padding: 20px;
+	background: #fafafa;
+	border-radius: 8px;
+}
+
+#label-date {
+	font-size: 16px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 12px;
+}
+
+#memo-text {
+	width: 100%;
+	height: 100px;
+	padding: 12px;
+	border: 1px solid #f0f0f0;
+	border-radius: 6px;
+	font-size: 14px;
+	font-family: inherit;
+	resize: vertical;
+	box-sizing: border-box;
+	transition: border-color 0.2s;
+}
+
+#memo-text:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+#btn-save {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 24px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin-top: 12px;
+	margin-right: 8px;
+}
+
+#btn-save:hover {
+	background: #e02859;
+}
+
+#btn-delete {
+	background: #f0f0f0;
+	color: #666666;
+	padding: 10px 24px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.2s;
+	margin-top: 12px;
+}
+
+#btn-delete:hover {
+	background: #ff4444;
+	color: #ffffff;
+}
+
+/* ========== 반응형 ========== */
+@media ( max-width : 1024px) {
+	main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	main {
+		padding: 40px 20px 60px;
+	}
+	section {
+		max-width: 100%;
+	}
+	h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	.write-btn {
+		padding: 8px 20px;
+		font-size: 13px;
+	}
+	article table thead th, article table tbody td {
+		padding: 12px 8px;
+		font-size: 13px;
+	}
+
+	/* 일부 열 숨기기 (선택적) */
+	article table thead th:nth-child(1), article table tbody td:nth-child(1)
+		{
+		display: none; /* 번호 숨김 */
+	}
+	article table thead th:nth-child(5), article table tbody td:nth-child(5)
+		{
+		display: none; /* 조회수 숨김 */
+	}
+	article table button {
+		padding: 5px 12px;
+		font-size: 12px;
+	}
+	.pagination a, .pagination span {
+		padding: 6px 10px;
+		font-size: 13px;
+		margin: 0 2px;
+	}
+
+	/* 관리자 메뉴 버튼 반응형 */
+	.admin-menu-buttons {
+		padding: 16px;
+	}
+	.admin-menu-buttons input[type="button"] {
+		padding: 8px 16px;
+		font-size: 13px;
+	}
+
+	/* 달력 반응형 */
+	#calendar-header {
+		gap: 15px;
+	}
+	#calendar-header button {
+		width: 36px;
+		height: 36px;
+		font-size: 16px;
+	}
+	#label-month {
+		font-size: 18px;
+		min-width: 120px;
+	}
+	#calendar-body td {
+		padding: 8px;
+		width: 14.285%; /* 고정 너비 유지 */
+		height: 70px; /* 고정 높이 */
+		max-height: 70px; /* 최대 높이 제한 */
+		font-size: 14px;
+	}
+	#calendar-body td div:first-child {
+		font-size: 14px;
+	}
+	.memo-preview {
+		font-size: 10px;
+		padding: 3px 5px;
+	}
+	article table tfoot input[type="button"] {
+		padding: 8px 16px;
+		font-size: 13px;
+		margin: 4px 2px;
+	}
+	#memo-area {
+		padding: 16px;
+	}
+	#label-date {
+		font-size: 15px;
+	}
+	#memo-text {
+		height: 80px;
+		padding: 10px;
+		font-size: 13px;
+	}
+	#btn-save, #btn-delete {
+		padding: 8px 20px;
+		font-size: 13px;
+		margin-top: 10px;
+	}
+	#btn-save {
+		margin-right: 6px;
+	}
+}
+
+@media ( max-width : 480px) {
+	main {
+		padding: 40px 15px 60px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	.write-btn {
+		padding: 8px 16px;
+		font-size: 13px;
+	}
+	article table thead th, article table tbody td {
+		padding: 10px 6px;
+		font-size: 12px;
+	}
+
+	/* 추가로 날짜 숨기기 */
+	article table thead th:nth-child(4), article table tbody td:nth-child(4)
+		{
+		display: none;
+	}
+	article table button {
+		padding: 4px 10px;
+		font-size: 11px;
+	}
+	.pagination a, .pagination span {
+		padding: 6px 8px;
+		font-size: 12px;
+		margin: 0 1px;
+	}
+
+	/* 관리자 메뉴 버튼 모바일 */
+	.admin-menu-buttons {
+		padding: 12px;
+		gap: 6px;
+	}
+	.admin-menu-buttons input[type="button"] {
+		padding: 8px 12px;
+		font-size: 12px;
+	}
+
+	/* 달력 모바일 */
+	#calendar-header {
+		gap: 10px;
+	}
+	#calendar-header button {
+		width: 36px;
+		height: 36px;
+		font-size: 14px;
+	}
+	#label-month {
+		font-size: 18px;
+		min-width: 140px;
+	}
+	#calendar-body td {
+		padding: 8px 6px;
+		width: 14.285%; /* 고정 너비 유지 */
+		height: 65px; /* 고정 높이 */
+		max-height: 65px; /* 최대 높이 제한 */
+		font-size: 14px;
+	}
+	#calendar-body td div:first-child {
+		font-size: 13px;
+	}
+	.memo-preview {
+		font-size: 9px;
+		max-height: 35px;
+	}
+	article table tfoot input[type="button"] {
+		padding: 8px 12px;
+		font-size: 12px;
+		margin: 3px 2px;
+		display: inline-block;
+	}
+	#memo-area {
+		padding: 12px;
+	}
+	#label-date {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	#memo-text {
+		height: 70px;
+		padding: 8px;
+		font-size: 12px;
+	}
+	#btn-save, #btn-delete {
+		padding: 8px 16px;
+		font-size: 12px;
+		margin-top: 8px;
+		display: inline-block;
+	}
+	#btn-save {
+		margin-right: 4px;
+	}
+}

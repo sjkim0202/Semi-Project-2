@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+/* ========== 알림 팝업 레이아웃 ========== */
+.notification-list {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
+	margin: 0;
+	padding: 20px;
+	background-color: #fafafa;
+	color: #1a1a1a;
+}
+
+.notification-list h2 {
+	margin: 0 0 20px 0;
+	font-size: 20px;
+	font-weight: 600;
+	color: #1a1a1a;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #f0f0f0;
+	letter-spacing: -0.3px;
+}
+
+/* ========== 알림 컨테이너 ========== */
+.notification-list .noti-container {
+	background: #ffffff;
+	border-radius: 8px;
+	padding: 0;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	max-height: 480px;
+	overflow-y: auto;
+}
+
+/* ========== 알림 테이블 ========== */
+.notification-list table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 14px;
+}
+
+.notification-list th {
+	padding: 14px 16px;
+	text-align: left;
+	background-color: #fafafa;
+	border-bottom: 2px solid #f0f0f0;
+	font-weight: 600;
+	color: #666666;
+	font-size: 13px;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.notification-list td {
+	padding: 14px 16px;
+	border-bottom: 1px solid #f0f0f0;
+	color: #333333;
+}
+
+.notification-list tr:last-child td {
+	border-bottom: none;
+}
+
+.notification-list tr:hover {
+	background-color: #fff8fa;
+}
+
+/* ========== 알림 링크 ========== */
+.notification-list a.noti-link {
+	text-decoration: none;
+	color: #333333;
+	display: block;
+	transition: color 0.2s;
+}
+
+.notification-list a.noti-link:hover {
+	color: #ff2f6e;
+}
+
+/* ========== 빈 알림 상태 ========== */
+.notification-list .noti-empty {
+	text-align: center;
+	padding: 60px 20px;
+	color: #999999;
+	font-size: 15px;
+}
+
+/* ========== 버튼 영역 ========== */
+.notification-list .btn-area {
+	text-align: right;
+	margin-top: 16px;
+}
+
+.notification-list .btn-close {
+	background: #ff2f6e;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 24px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.notification-list .btn-del {
+	background: none;
+	color: #ff2f6e;
+	border: 1px solid #ff2f6e;
+	border-radius: 6px;
+	padding: 6px 12px;
+	font-size: 13px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s;
+	white-space: nowrap;
+	min-width: 60px;
+}
+
+.notification-list .btn-del:hover {
+	background: #ff2f6e;
+	color: #ffffff;
+}
+
+.notification-list .btn-close:hover {
+	background: #e02859;
+}
+
+/* ========== 스크롤바 ========== */
+.notification-list .noti-container::-webkit-scrollbar {
+	width: 6px;
+}
+
+.notification-list .noti-container::-webkit-scrollbar-track {
+	background: #f5f5f5;
+}
+
+.notification-list .noti-container::-webkit-scrollbar-thumb {
+	background: #d9d9d9;
+	border-radius: 3px;
+}
+
+.notification-list .noti-container::-webkit-scrollbar-thumb:hover {
+	background: #bfbfbf;
+}
+
+/* ========== 반응형 ========== */
+
+/* 작은 스마트폰 (최대 480px) */
+@media ( max-width : 480px) {
+	.notification-list {
+		padding: 12px;
+	}
+	.notification-list h2 {
+		font-size: 18px;
+		margin-bottom: 14px;
+		padding-bottom: 8px;
+	}
+	.notification-list .noti-container {
+		max-height: 380px;
+	}
+	.notification-list table {
+		font-size: 13px;
+	}
+	.notification-list th, .notification-list td {
+		padding: 10px 12px;
+	}
+
+	/* 날짜 열 숨기기 (모바일) */
+	.notification-list th:nth-child(2), .notification-list td:nth-child(2) {
+		display: none;
+	}
+	.notification-list .btn-del {
+		padding: 5px 10px;
+		font-size: 12px;
+	}
+	.notification-list .btn-close {
+		width: 100%;
+		padding: 12px;
+		font-size: 14px;
+	}
+}
+
+/* 태블릿 (481px ~ 768px) */
+@media ( min-width : 481px) and (max-width: 768px) {
+	.notification-list {
+		padding: 16px;
+	}
+	.notification-list h2 {
+		font-size: 19px;
+	}
+	.notification-list table {
+		font-size: 13.5px;
+	}
+	.notification-list th, .notification-list td {
+		padding: 12px 14px;
+	}
+	.notification-list .noti-container {
+		max-height: 420px;
+	}
+	.notification-list .btn-del {
+		padding: 6px 12px;
+		font-size: 13px;
+	}
+	.notification-list .btn-close {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+}
+
+/* 작은 노트북 및 일반 화면 (769px ~ 1024px) */
+@media ( min-width : 769px) and (max-width: 1024px) {
+	.notification-list {
+		padding: 20px;
+	}
+	.notification-list h2 {
+		font-size: 20px;
+	}
+	.notification-list table {
+		font-size: 14px;
+	}
+	.notification-list th, .notification-list td {
+		padding: 14px 16px;
+	}
+	.notification-list .noti-container {
+		max-height: 480px;
+	}
+	.notification-list .btn-del {
+		padding: 6px 12px;
+	}
+	.notification-list .btn-close {
+		padding: 10px 24px;
+	}
+}

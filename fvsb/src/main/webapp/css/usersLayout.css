@@ -1,0 +1,1475 @@
+@charset "UTF-8";
+
+/* ========================================================
+   ID 중복 검사 팝업 페이지 전용 스타일
+   (body.idcheck 클래스가 있을 때만 적용)
+   ======================================================== */
+body.idcheck {
+	background: #fafafa;
+	color: #1a1a1a;
+	margin: 0;
+	padding: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
+}
+
+body.idcheck h2 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin: 0 0 24px 0;
+	letter-spacing: -0.5px;
+}
+
+body.idcheck main {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	padding: 30px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+body.idcheck form {
+	margin: 0;
+}
+
+body.idcheck fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+body.idcheck fieldset legend {
+	display: none;
+}
+
+body.idcheck label {
+	display: block;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	margin-bottom: 8px;
+}
+
+body.idcheck input[type="text"] {
+	width: 100%;
+	padding: 12px 14px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+	box-sizing: border-box;
+	margin-bottom: 16px;
+}
+
+body.idcheck input[type="text"]:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+body.idcheck input[type="submit"] {
+	width: 100%;
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 15px;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+body.idcheck input[type="submit"]:hover {
+	background: #e02859;
+}
+
+/* ========== 결과 영역 (idCheck_ok.jsp용) ========== */
+body.idcheck .result-message {
+	text-align: center;
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+body.idcheck .result-message.success {
+	background: #f0f9ff;
+	color: #0369a1;
+	border: 1px solid #bae6fd;
+}
+
+body.idcheck .result-message.error {
+	background: #fef2f2;
+	color: #dc2626;
+	border: 1px solid #fecaca;
+}
+
+body.idcheck .button-group {
+	display: flex;
+	gap: 8px;
+	margin-top: 20px;
+}
+
+body.idcheck .button-group input[type="button"] {
+	flex: 1;
+	background: #f0f0f0;
+	color: #666666;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+body.idcheck .button-group input[type="button"]:hover {
+	background: #e6e6e6;
+}
+
+body.idcheck .button-group input[type="button"].primary {
+	background: #ff2f6e;
+	color: #ffffff;
+}
+
+body.idcheck .button-group input[type="button"].primary:hover {
+	background: #e02859;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 480px) {
+	body.idcheck {
+		padding: 15px;
+	}
+	body.idcheck main {
+		padding: 24px;
+		margin: 0;
+		border-radius: 6px;
+	}
+	body.idcheck h2 {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+}
+
+/* ========================================================
+   로그인 페이지 전용 스타일
+   (body.login 클래스가 있을 때만 적용)
+   ======================================================== */
+body.login main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body.login main form {
+	width: 100%;
+	max-width: 500px;
+}
+
+body.login .login-logo {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+body.login .login-logo a {
+	display: inline-block;
+}
+
+body.login .login-logo img {
+	height: 70px;
+	width: auto;
+	transition: opacity 0.2s;
+}
+
+body.login .login-logo img:hover {
+	opacity: 0.8;
+}
+
+body.login section {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	padding: 50px;
+}
+
+body.login .input-group {
+	margin-bottom: 24px;
+}
+
+body.login .input-group:last-of-type {
+	margin-bottom: 0;
+}
+
+body.login .input-group input[type="text"], body.login .input-group input[type="password"]
+	{
+	width: 100%;
+	padding: 18px 18px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 16px;
+	transition: border-color 0.2s;
+	box-sizing: border-box;
+}
+
+body.login .input-group input[type="text"]:focus, body.login .input-group input[type="password"]:focus
+	{
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+body.login .btn-login {
+	width: 100%;
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 18px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 600;
+	font-size: 17px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin-top: 24px;
+}
+
+body.login .btn-login:hover {
+	background: #e02859;
+}
+
+body.login .login-options {
+	margin-top: 18px;
+	display: flex;
+	align-items: center;
+}
+
+body.login .login-options input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin: 0 8px 0 0;
+	cursor: pointer;
+}
+
+body.login .login-options label {
+	font-size: 15px;
+	color: #666666;
+	cursor: pointer;
+	user-select: none;
+}
+
+body.login .login-links {
+	text-align: center;
+	margin-top: 28px;
+	padding-top: 28px;
+	border-top: 1px solid #f0f0f0;
+}
+
+body.login .login-links a {
+	color: #666666;
+	text-decoration: none;
+	font-size: 15px;
+	margin: 0 12px;
+	transition: color 0.2s;
+}
+
+body.login .login-links a:hover {
+	color: #ff2f6e;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.login main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.login main {
+		padding: 40px 20px 60px;
+	}
+	body.login main form {
+		max-width: 100%;
+	}
+	body.login .login-logo {
+		margin-bottom: 30px;
+	}
+	body.login .login-logo img {
+		height: 42px;
+	}
+	body.login section {
+		padding: 30px 24px;
+	}
+	body.login .input-group input[type="text"], body.login .input-group input[type="password"]
+		{
+		padding: 13px 14px;
+		font-size: 14px;
+	}
+	body.login .btn-login {
+		padding: 14px;
+		font-size: 15px;
+	}
+	body.login .login-options label {
+		font-size: 13px;
+	}
+	body.login .login-links a {
+		font-size: 13px;
+		margin: 0 8px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.login main {
+		padding: 40px 15px 60px;
+	}
+	body.login .login-logo img {
+		height: 38px;
+	}
+	body.login section {
+		padding: 24px 20px;
+	}
+	body.login .input-group {
+		margin-bottom: 16px;
+	}
+	body.login .input-group input[type="text"], body.login .input-group input[type="password"]
+		{
+		padding: 12px 14px;
+		font-size: 14px;
+	}
+	body.login .btn-login {
+		padding: 14px;
+		font-size: 15px;
+		margin-top: 16px;
+	}
+	body.login .login-options {
+		margin-top: 12px;
+	}
+	body.login .login-options input[type="checkbox"] {
+		width: 18px;
+		height: 18px;
+	}
+	body.login .login-links {
+		margin-top: 20px;
+		padding-top: 20px;
+	}
+	body.login .login-links a {
+		display: block;
+		margin: 10px 0;
+	}
+}
+/* ========================================================
+   비밀번호 변경/확인 페이지 전용 스타일 (팝업)
+   (body.pwd-change, body.pwd-check 클래스가 있을 때만 적용)
+   ======================================================== */
+body.pwd-change, body.pwd-check {
+	background: #fafafa;
+	color: #1a1a1a;
+	margin: 0;
+	padding: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
+}
+
+body.pwd-change h2, body.pwd-check h2 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin: 0 0 24px 0;
+	letter-spacing: -0.5px;
+}
+
+body.pwd-change main, body.pwd-check main {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	padding: 30px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+body.pwd-change section, body.pwd-check section {
+	width: 100%;
+}
+
+body.pwd-change article, body.pwd-check article {
+	background: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	overflow: visible;
+	padding: 0;
+	margin: 0;
+}
+
+body.pwd-change article form, body.pwd-check article form {
+	padding: 0;
+	margin: 0;
+}
+
+body.pwd-change fieldset, body.pwd-check fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+body.pwd-change fieldset legend, body.pwd-check fieldset legend {
+	display: none;
+}
+
+body.pwd-change article table, body.pwd-check article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body.pwd-change article table th, body.pwd-check article table th {
+	padding: 16px 12px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 13px;
+	color: #666666;
+	background: #ffffff;
+	width: 35%;
+	vertical-align: middle;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.pwd-change article table td, body.pwd-check article table td {
+	padding: 16px 12px;
+	font-size: 13px;
+	color: #333333;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.pwd-change article table input[type="password"], body.pwd-check article table input[type="password"]
+	{
+	width: 100%;
+	padding: 12px 14px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+	box-sizing: border-box;
+}
+
+body.pwd-change article table input[type="password"]:focus, body.pwd-check article table input[type="password"]:focus
+	{
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* ========== 버튼 영역 ========== */
+body.pwd-change article table tr:last-child, body.pwd-check article table tr:last-child
+	{
+	border-bottom: none;
+}
+
+body.pwd-change article table tr:last-child td, body.pwd-check article table tr:last-child td
+	{
+	text-align: center;
+	padding: 24px 12px;
+	background: #ffffff;
+	border-top: none;
+	border-bottom: none;
+}
+/* 새로 추가된 단일 버튼 행의 셀 스타일 */
+body.pwd-check article table .combined-button-cell {
+	/* 기본 td 스타일을 덮어씁니다. */
+	display: block; /* 내부 div들이 세로로 쌓이도록 함 */
+	text-align: center;
+    padding: 24px 12px; /* 상하 패딩 */
+    background: #ffffff;
+    border-top: none; /* 상단 구분선 */
+    border-bottom: none;
+}
+/* '확인' 버튼과 '다시작성/취소' 버튼 사이의 간격 */
+body.pwd-check article table .confirm-area {
+    margin-bottom: 8px; 
+}
+body.pwd-check article table input[type="submit"].full-width-button {
+	width: 100%; /* 부모 div 전체 너비 사용 */
+	margin: 0; /* 기존 마진 제거 */
+	/* 핑크색 배경 및 기타 스타일은 기존 input[type="submit"]에서 상속 */
+}
+body.pwd-check article table .action-area.button-row {
+    display: flex; 
+    justify-content: center; /* 가운데 정렬 */
+    gap: 6px; /* 버튼 사이 간격 */
+}
+body.pwd-change article table .action-area.button-row {
+    display: flex; 
+    justify-content: center; 
+    gap: 6px;
+}
+
+/* '다시작성'과 '취소' 버튼의 크기 및 속성 통일 */
+body.pwd-check article table .action-area input[type="reset"],
+body.pwd-check article table .action-area input[type="button"]
+	{
+	flex-grow: 1; /* 부모 영역 내에서 공간 균등 분할 */
+	width: 50%; /* 50% 너비 */
+	max-width: none; /* 너비 제한 해제 */
+	
+    /* ✨ 여기를 주목해 주세요: cursor: pointer 추가 ✨ */
+    cursor: pointer;
+    
+    /* 흰색 배경, 회색 테두리 스타일 적용 */
+	background: #ffffff; 
+	color: #333333; 
+	border: 1px solid #d9d9d9; 
+	padding: 11px 20px;
+	margin: 0; 
+    border-radius: 6px; /* 둥근 모서리 유지 */
+    font-weight: 500;
+	font-size: 14px;
+}
+body.pwd-change article table .action-area input[type="reset"],
+body.pwd-change article table .action-area input[type="button"]
+	{
+	flex-grow: 1;
+	width: 50%; 
+	max-width: none;
+    cursor: pointer;
+	background: #ffffff; 
+	color: #333333; 
+	border: 1px solid #d9d9d9; 
+	padding: 11px 20px;
+	margin: 0; 
+    border-radius: 6px;
+    font-weight: 500;
+	font-size: 14px;
+}
+body.pwd-change article table input[type="submit"], body.pwd-check article table input[type="submit"]
+	{
+	width: 48%;
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 1%;
+}
+
+body.pwd-change article table input[type="submit"]:hover, body.pwd-check article table input[type="submit"]:hover
+	{
+	background: #e02859;
+}
+
+body.pwd-change article table input[type="reset"], body.pwd-check article table input[type="reset"]
+body.pwd-change article table input[type="button"]:hover, body.pwd-check article table input[type="button"]
+	{
+	width: 48%;
+	background: #ffffff;
+	color: #666666;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 1%;
+}
+
+body.pwd-change article table input[type="reset"]:hover, body.pwd-check article table input[type="reset"]:hover,
+body.pwd-change article table input[type="button"]:hover, body.pwd-check article table input[type="button"]:hover
+	{
+	background: #e6e6e6;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 480px) {
+	body.pwd-change, body.pwd-check {
+		padding: 15px;
+	}
+	body.pwd-change main, body.pwd-check main {
+		padding: 24px;
+		margin: 0;
+		border-radius: 6px;
+	}
+	body.pwd-change h2, body.pwd-check h2 {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	body.pwd-change article table th, body.pwd-change article table td, body.pwd-check article table th,
+		body.pwd-check article table td {
+		display: block;
+		width: 100%;
+		padding: 12px 8px;
+	}
+	body.pwd-change article table th, body.pwd-check article table th {
+		padding-bottom: 6px;
+		border-bottom: none;
+	}
+	body.pwd-change article table td, body.pwd-check article table td {
+		padding-top: 0;
+		border-bottom: none;
+	}
+	body.pwd-change article table input[type="submit"], body.pwd-change article table input[type="reset"],
+		body.pwd-check article table input[type="submit"], body.pwd-check article table input[type="reset"]
+		{
+		width: 100%;
+		margin: 4px 0;
+	}
+	
+	
+	
+	
+}
+
+/* ========================================================
+   회원가입 페이지 전용 스타일
+   (body.users-join 클래스가 있을 때만 적용)
+   ======================================================== */
+body.users-join main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+}
+
+body.users-join section {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+body.users-join h2 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 40px;
+	letter-spacing: -0.5px;
+}
+
+body.users-join article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.users-join article form {
+	padding: 0;
+}
+
+body.users-join fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+body.users-join fieldset legend {
+	display: none;
+}
+
+body.users-join article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body.users-join article table tr {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.users-join article table th {
+	padding: 18px 24px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	background: #fafafa;
+	width: 20%;
+	vertical-align: middle;
+}
+
+body.users-join article table td {
+	padding: 18px 24px;
+	font-size: 14px;
+	color: #333333;
+}
+
+body.users-join article table input[type="text"], body.users-join article table input[type="password"]
+	{
+	width: 250px;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+}
+
+body.users-join article table input[type="text"]:focus, body.users-join article table input[type="password"]:focus
+	{
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+body.users-join article table input[name="u_id"] {
+	width: 200px;
+	margin-right: 8px;
+}
+
+body.users-join article table input[name="u_name"] {
+	width: 250px;
+}
+
+body.users-join article table select {
+	width: 250px;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+	cursor: pointer;
+	background: #ffffff;
+}
+
+body.users-join article table select:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* ========== 라디오/체크박스 ========== */
+body.users-join article table input[type="radio"], body.users-join article table input[type="checkbox"]
+	{
+	width: 18px;
+	height: 18px;
+	margin: 0 6px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+body.users-join article table label {
+	margin-right: 20px;
+	font-size: 14px;
+	color: #333333;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+/* 장르 체크박스 라인 높이 */
+body.users-join article table tr:nth-child(8) td, body.users-join article table tr:nth-child(9) td
+	{
+	line-height: 2;
+}
+
+/* ========== 파일 입력 ========== */
+body.users-join article table input[type="file"] {
+	padding: 8px 0;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+/* ========== ID확인 버튼 ========== */
+body.users-join article table input[type="button"]#idcheck {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin-left: 8px;
+}
+
+body.users-join article table input[type="button"]#idcheck:hover {
+	background: #e02859;
+}
+
+/* ========== 버튼 영역 ========== */
+body.users-join article table tr:last-child {
+	border-bottom: none;
+}
+
+body.users-join article table tr:last-child td {
+	text-align: center;
+	padding: 32px 24px;
+	background: #fafafa;
+	border-top: 2px solid #f0f0f0;
+}
+
+body.users-join article table input[type="submit"] {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.users-join article table input[type="submit"]:hover {
+	background: #e02859;
+}
+
+body.users-join article table input[type="reset"] {
+	background: #f0f0f0;
+	color: #666666;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.users-join article table input[type="reset"]:hover {
+	background: #e6e6e6;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.users-join main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.users-join main {
+		padding: 40px 20px 60px;
+	}
+	body.users-join section {
+		max-width: 100%;
+	}
+	body.users-join h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	body.users-join article table th {
+		width: 30%;
+		padding: 14px 16px;
+		font-size: 13px;
+	}
+	body.users-join article table td {
+		padding: 14px 16px;
+		font-size: 13px;
+	}
+	body.users-join article table input[type="text"], body.users-join article table input[type="password"],
+		body.users-join article table select {
+		width: 100%;
+		max-width: 300px;
+	}
+	body.users-join article table input[name="u_id"] {
+		width: calc(100% - 120px);
+	}
+	body.users-join article table input[type="button"]#idcheck {
+		padding: 8px 16px;
+		font-size: 13px;
+		margin-left: 8px;
+	}
+	body.users-join article table input[type="submit"], body.users-join article table input[type="reset"]
+		{
+		padding: 10px 24px;
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.users-join main {
+		padding: 40px 15px 60px;
+	}
+	body.users-join h2 {
+		font-size: 20px;
+	}
+	body.users-join article table th, body.users-join article table td {
+		display: block;
+		width: 100%;
+		padding: 12px 16px;
+	}
+	body.users-join article table th {
+		padding-bottom: 8px;
+		border-bottom: none;
+	}
+	body.users-join article table td {
+		border-bottom: 1px solid #f0f0f0;
+		padding-top: 0;
+	}
+	body.users-join article table tr {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.users-join article table input[type="text"], body.users-join article table input[type="password"],
+		body.users-join article table select {
+		width: 100%;
+	}
+	body.users-join article table input[name="u_id"] {
+		width: calc(100% - 90px);
+		margin-bottom: 8px;
+		display: inline-block;
+	}
+	body.users-join article table input[type="button"]#idcheck {
+		width: auto;
+		margin-left: 8px;
+	}
+	body.users-join article table label {
+		margin-right: 12px;
+		display: inline-block;
+	}
+	body.users-join article table input[type="submit"], body.users-join article table input[type="reset"]
+		{
+		width: 48%;
+		padding: 10px 16px;
+		font-size: 13px;
+	}
+}
+
+/* ========================================================
+   마이페이지 전용 스타일
+   (body.users-info 클래스가 있을 때만 적용)
+   ======================================================== */
+body.users-info main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+}
+
+body.users-info section {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+body.users-info .profile-header {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	padding: 40px;
+	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+body.users-info .profile-avatar {
+	flex-shrink: 0;
+}
+
+body.users-info .profile-avatar img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid #f0f0f0;
+}
+
+body.users-info .profile-text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin: 0 0 8px 0;
+}
+
+body.users-info .profile-text p {
+	font-size: 16px;
+	color: #666666;
+	margin: 0;
+}
+
+body.users-info article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.users-info article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body.users-info article table thead {
+	background: #fafafa;
+	border-bottom: 2px solid #f0f0f0;
+}
+
+body.users-info article table thead th {
+	padding: 20px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 16px;
+	color: #1a1a1a;
+}
+
+body.users-info article table tbody tr {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.users-info article table tbody tr:last-child {
+	border-bottom: none;
+}
+
+body.users-info article table tbody th {
+	padding: 18px 24px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	background: #fafafa;
+	width: 30%;
+}
+
+body.users-info article table tbody td {
+	padding: 18px 24px;
+	font-size: 15px;
+	color: #333333;
+}
+
+body.users-info article table tbody tr:last-child td {
+	text-align: center;
+	padding: 32px 24px;
+	background: #fafafa;
+	border-top: 2px solid #f0f0f0;
+}
+
+body.users-info article table button {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 12px 28px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.users-info article table button:hover {
+	background: #e02859;
+}
+
+body.users-info article table button:last-child {
+	background: #f0f0f0;
+	color: #666666;
+}
+
+body.users-info article table button:last-child:hover {
+	background: #e6e6e6;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.users-info main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.users-info main {
+		padding: 40px 20px 60px;
+	}
+	body.users-info section {
+		max-width: 100%;
+	}
+	body.users-info .profile-header {
+		padding: 30px 24px;
+		gap: 20px;
+	}
+	body.users-info .profile-avatar img {
+		width: 100px;
+		height: 100px;
+	}
+	body.users-info .profile-text h3 {
+		font-size: 20px;
+	}
+	body.users-info .profile-text p {
+		font-size: 14px;
+	}
+	body.users-info article table thead th {
+		padding: 16px;
+		font-size: 15px;
+	}
+	body.users-info article table tbody th, body.users-info article table tbody td
+		{
+		padding: 14px 16px;
+		font-size: 13px;
+	}
+	body.users-info article table tbody th {
+		width: 35%;
+	}
+	body.users-info article table button {
+		padding: 10px 20px;
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.users-info main {
+		padding: 40px 15px 60px;
+	}
+	body.users-info .profile-header {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 24px 20px;
+	}
+	body.users-info .profile-avatar img {
+		width: 90px;
+		height: 90px;
+	}
+	body.users-info .profile-text h3 {
+		font-size: 18px;
+	}
+	body.users-info .profile-text p {
+		font-size: 13px;
+	}
+	body.users-info article table thead th {
+		padding: 14px;
+		font-size: 14px;
+	}
+	body.users-info article table tbody th, body.users-info article table tbody td
+		{
+		display: block;
+		width: 100%;
+		padding: 12px 16px;
+	}
+	body.users-info article table tbody th {
+		padding-bottom: 6px;
+		border-bottom: none;
+	}
+	body.users-info article table tbody td {
+		padding-top: 0;
+		padding-bottom: 16px;
+	}
+	body.users-info article table tbody tr {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.users-info article table tbody tr:last-child {
+		border-bottom: none;
+	}
+	body.users-info article table button {
+		width: 48%;
+		padding: 10px 16px;
+		font-size: 13px;
+		margin: 5px 1%;
+	}
+}
+
+/* ========================================================
+   회원정보 수정 페이지 전용 스타일
+   (body.users-update 클래스가 있을 때만 적용)
+   ======================================================== */
+body.users-update main {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 40px 100px;
+	min-height: 600px;
+}
+
+body.users-update section {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+body.users-update h2 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1a1a1a;
+	margin-bottom: 40px;
+	letter-spacing: -0.5px;
+}
+
+body.users-update article {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+
+body.users-update article form {
+	padding: 0;
+}
+
+body.users-update fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+body.users-update fieldset legend {
+	display: none;
+}
+
+body.users-update article table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body.users-update article table tr {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+body.users-update article table th {
+	padding: 18px 24px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 14px;
+	color: #666666;
+	background: #fafafa;
+	width: 20%;
+	vertical-align: middle;
+}
+
+body.users-update article table td {
+	padding: 18px 24px;
+	font-size: 14px;
+	color: #333333;
+}
+
+body.users-update article table input[type="text"], body.users-update article table input[type="password"]
+	{
+	width: 250px;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+}
+
+body.users-update article table input[type="text"]:focus, body.users-update article table input[type="password"]:focus
+	{
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+body.users-update article table input[name="u_id"] {
+	width: 200px;
+	margin-right: 8px;
+}
+
+body.users-update article table input[name="u_name"] {
+	width: 250px;
+}
+
+body.users-update article table select {
+	width: 250px;
+	padding: 10px 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+	cursor: pointer;
+	background: #ffffff;
+}
+
+body.users-update article table select:focus {
+	outline: none;
+	border-color: #ff2f6e;
+}
+
+/* ========== 라디오/체크박스 ========== */
+body.users-update article table input[type="radio"], body.users-update article table input[type="checkbox"]
+	{
+	width: 18px;
+	height: 18px;
+	margin: 0 6px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+body.users-update article table label {
+	margin-right: 20px;
+	font-size: 14px;
+	color: #333333;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+/* 장르 체크박스 라인 높이 */
+body.users-update article table tr:nth-child(8) td, body.users-update article table tr:nth-child(9) td
+	{
+	line-height: 2;
+}
+
+/* ========== 파일 입력 ========== */
+body.users-update article table input[type="file"] {
+	padding: 8px 0;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+/* ========== 버튼 스타일 ========== */
+body.users-update article table input[type="button"][value="비밀번호 변경"] {
+	background: #5a5a5a;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin-left: 8px;
+}
+
+body.users-update article table input[type="button"][value="비밀번호 변경"]:hover
+	{
+	background: #333333;
+}
+
+body.users-update article table input[type="button"][value="취소"] {
+	background: #f0f0f0;
+	color: #666666;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.users-update article table input[type="button"][value="취소"]:hover {
+	background: #e6e6e6;
+}
+
+/* 버튼 영역 */
+body.users-update article table tr:last-child {
+	border-bottom: none;
+}
+
+body.users-update article table tr:last-child td {
+	text-align: center;
+	padding: 32px 24px;
+	background: #fafafa;
+	border-top: 2px solid #f0f0f0;
+}
+
+body.users-update article table input[type="submit"] {
+	background: #ff2f6e;
+	color: #ffffff;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin: 0 5px;
+}
+
+body.users-update article table input[type="submit"]:hover {
+	background: #e02859;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media ( max-width : 1024px) {
+	body.users-update main {
+		padding: 60px 30px 80px;
+	}
+}
+
+@media ( max-width : 768px) {
+	body.users-update main {
+		padding: 40px 20px 60px;
+	}
+	body.users-update section {
+		max-width: 100%;
+	}
+	body.users-update h2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	body.users-update article table th {
+		width: 30%;
+		padding: 14px 16px;
+		font-size: 13px;
+	}
+	body.users-update article table td {
+		padding: 14px 16px;
+		font-size: 13px;
+	}
+	body.users-update article table input[type="text"], body.users-update article table input[type="password"],
+		body.users-update article table select {
+		width: 100%;
+		max-width: 300px;
+	}
+	body.users-update article table input[name="u_id"] {
+		width: calc(100% - 120px);
+	}
+	body.users-update article table input[type="button"] {
+		padding: 8px 16px;
+		font-size: 13px;
+	}
+	body.users-update article table input[type="submit"], body.users-update article table input[type="button"][value="취소"]
+		{
+		padding: 10px 24px;
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	body.users-update main {
+		padding: 40px 15px 60px;
+	}
+	body.users-update h2 {
+		font-size: 20px;
+	}
+	body.users-update article table th, body.users-update article table td {
+		display: block;
+		width: 100%;
+		padding: 12px 16px;
+	}
+	body.users-update article table th {
+		padding-bottom: 8px;
+		border-bottom: none;
+	}
+	body.users-update article table td {
+		border-bottom: 1px solid #f0f0f0;
+		padding-top: 0;
+	}
+	body.users-update article table tr {
+		border-bottom: 1px solid #f0f0f0;
+	}
+	body.users-update article table input[type="text"], body.users-update article table input[type="password"],
+		body.users-update article table select {
+		width: 100%;
+	}
+	body.users-update article table input[name="u_id"] {
+		width: calc(100% - 90px);
+		margin-bottom: 8px;
+		display: inline-block;
+	}
+	body.users-update article table input[type="button"] {
+		width: auto;
+		margin-left: 8px;
+	}
+	body.users-update article table label {
+		margin-right: 12px;
+		display: inline-block;
+	}
+	body.users-update article table input[type="submit"], body.users-update article table input[type="button"][value="취소"]
+		{
+		width: 48%;
+		padding: 10px 16px;
+		font-size: 13px;
+	}
+}
